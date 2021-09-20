@@ -1,0 +1,118 @@
+div {
+  display: inline-block;
+}
+
+.canvas {
+  float: left;
+  border: 1px solid #000;
+  width: 70%;
+  height: 100%;
+}
+
+.palette {
+  border: 1px #000 solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: 25%;
+  height: 100%;
+  float: right;
+  background: #888;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #f00;
+}
+
+.swatch {
+  border-radius: 5px;
+  margin: 3px;
+  width: 9vw;
+  height: 9vw;
+}
+
+.reset {
+  width: 100%;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+  color: #888;
+  font-size: 24pt;
+  margin: 0;
+}
+
+.red {
+  background: #f00;
+  border: 3px solid #f00;
+}
+
+.orange {
+  background: #ffa500;
+  border: 3px solid #ffa500;
+}
+
+.yellow {
+  background: #ffff00;
+  border: 3px solid #ffff00;
+}
+
+.green {
+  background: #008000;
+  border: 3px solid #008000;
+}
+
+.blue {
+  background: #00f;
+  border: 3px solid #00f;
+}
+
+.purple {
+  background: #800080;
+  border: 3px solid #800080;
+}
+
+.pink {
+  background: #ffc0cb;
+  border: 3px solid #ffc0cb;
+}
+
+.brown {
+  background: #a52a2a;
+  border: 3px solid #a52a2a;
+}
+
+.black {
+  background: #000;
+  border: 3px solid #000;
+}
+
+.white {
+  background: #fff;
+  border: 3px solid #fff;
+}
+
+.light p {
+  color: #fff;
+}
+
+.dark p {
+  color: #000;
+}
+
+.active.light {
+  border-color: #fff;
+}
+
+.active.dark {
+  border-color: #000;
+}
+
+.select {
+  background-color: none;
+}
