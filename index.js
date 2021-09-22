@@ -5,11 +5,10 @@ function initEventsToReset(svg, className) {
 
     if (elems.length > 0) {
         elems[0].addEventListener('click', function() {
-            var pathes = svg.querySelectorAll('path');
+            var svgDoc = svg.contentDocument;
+            var pathes = svgDoc.querySelectorAll('path');
 
-            console.log(svg);
-            console.log(svg.contentDocument);
-            console.log(svg[0]);
+            console.log(svgDoc);
 
             for (p = 0; p < pathes.length; ++p) {
                 pathes[p].setAttribute('fill', '#fff');
