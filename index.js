@@ -11,7 +11,8 @@ function initEventsToReset(svg, className) {
             console.log(svgDoc);
 
             for (p = 0; p < pathes.length; ++p) {
-                pathes[p].setAttribute('fill', '#fff');
+                pathes[p].setAttribute('style', 'fill:#fff');
+                // fill:#cfc6bb;fill-opacity:1;stroke:none;stroke-width:0.264583
             }
         });
     }
