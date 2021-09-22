@@ -7,6 +7,10 @@ function initEventsToReset(svg, className) {
         elems[0].addEventListener('click', function() {
             var pathes = svg.querySelectorAll('path');
 
+            console.log(svg);
+            console.log(svg.contentDocument);
+            console.log(svg[0]);
+
             for (p = 0; p < pathes.length; ++p) {
                 pathes[p].setAttribute('fill', '#fff');
             }
@@ -39,6 +43,8 @@ function initEventsOfVector(svg) {
     }
 }
 
-initEventsToReset(document.querySelector('svg'), 'reset');
-initEventsToSwatches('swatch');
-initEventsOfVector(document.querySelector('svg'));
+window.addEventListener('load', function() {
+    initEventsToReset(document.getElementById('graphic'), 'reset');
+    initEventsToSwatches('swatch');
+    initEventsOfVector(document.querySelector('svg'));
+});
