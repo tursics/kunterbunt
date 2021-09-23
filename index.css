@@ -1,32 +1,71 @@
-path {
-	transition: fill .4s ease;
+body {
+	margin: 1rem;
+	overflow: hidden;
 }
 
-
-
-
-
-
-
 div {
-  display: inline-block;
+	display: inline-block;
 }
 
 .canvas {
-  float: left;
-  border: 1px solid #000;
-  width: 70%;
-  height: 100%;
+	border: 2px solid #000;
+	border-radius: 1rem;
+	padding: 1rem;
+}
+.toolRight .canvas {
+	float: left;
+	height: calc(100% - 2rem - 4px);
+	width: calc(75% - 2.5rem - 4px);
 }
 
-.palette {
-  border: 1px #000 solid;
-  border-radius: 5px;
-  padding: 10px;
-  width: 25%;
-  height: 100%;
-  float: right;
-  background: #888;
+.tool {
+	background: #bcc;
+	border: 2px #000 solid;
+	border-radius: 1rem;
+	overflow: hidden;
+	padding: 1rem;
+}
+.toolRight .tool {
+	float: right;
+	height: calc(100% - 2rem - 4px);
+	width: calc(25% - 2.5rem - 4px);
+}
+
+.tool #resetColor {
+	background: #fff;
+	border: 2px solid #000;
+	border-radius: 1rem;
+	height: 3rem;
+	margin: 0 0 1rem 0;
+	width: 100%;
+}
+
+.tool .swatch {
+	border-radius: 1.5rem;
+	height: calc(3rem - .4rem);
+	margin: .2rem;
+	transform: rotate(0deg);
+	transition: transform 500ms ease;
+	width: calc(3rem - .4rem);
+}
+
+.tool .swatch.active {
+	border-top-color: #fff;
+	border-left-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #fff;
+	transform: rotate(270deg);
+}
+
+
+
+
+
+
+
+
+path {
+	transition: fill .4s ease;
 }
 
 .first,
@@ -36,17 +75,6 @@ div {
   width: 200px;
   height: 200px;
   border: 1px solid #f00;
-}
-
-.swatch {
-  border-radius: 5px;
-  margin: 3px;
-  width: 9vw;
-  height: 9vw;
-}
-
-#resetColor {
-  width: 100%;
 }
 
 p {
@@ -105,22 +133,6 @@ p {
 .white {
   background: #fff;
   border: 3px solid #fff;
-}
-
-.light p {
-  color: #fff;
-}
-
-.dark p {
-  color: #000;
-}
-
-.active.light {
-  border-color: #fff;
-}
-
-.active.dark {
-  border-color: #000;
 }
 
 .select {
