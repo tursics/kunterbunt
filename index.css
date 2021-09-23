@@ -1,3 +1,13 @@
+path {
+	transition: fill .4s ease;
+}
+
+
+
+
+
+
+
 div {
   display: inline-block;
 }
@@ -35,7 +45,7 @@ div {
   height: 9vw;
 }
 
-.reset {
+#resetColor {
   width: 100%;
 }
 
