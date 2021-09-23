@@ -36,13 +36,18 @@ div {
 	width: calc(9rem + 2.5rem + 5px);
 }
 
-.tool #resetColor {
+.tool #resetColor, .tool #nextImage {
 	background: #fff;
 	border: 2px solid #000;
 	border-radius: 1rem;
 	height: 3rem;
-	margin: 0 0 1rem 0;
 	width: 100%;
+}
+.tool #resetColor {
+	margin: 0 0 .5rem 0;
+}
+.tool #nextImage {
+	margin: 0 0 1rem 0;
 }
 
 .tool .swatch {
