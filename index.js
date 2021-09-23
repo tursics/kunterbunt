@@ -52,6 +52,8 @@ function initButtons() {
     for (var s = 0; s < swatches.length; ++s) {
         swatches[s].addEventListener('click', onButtonColorSwatch);
 	}
+
+	onButtonColorSwatch.call(document.querySelector('.swatch.red'));
 }
 
 window.addEventListener('load', function() {

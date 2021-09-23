@@ -18,6 +18,11 @@ div {
 	width: calc(100% - 9rem - 3rem - 5rem - 5px);
 }
 
+#graphic {
+	height: 100%;
+	width: 100%;
+}
+
 .tool {
 	background: #bcc;
 	border: 2px #000 solid;
