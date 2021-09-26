@@ -7,6 +7,7 @@ var tool = {
 		dom: null,
 		doc: null,
 		id: '',
+		mouseDown: false,
 	},
 	color: '#fff',
 	fileId: 0,
@@ -39,7 +40,7 @@ function onButtonNextImage() {
 	reloadImage();
 }
 
-function onCanvasPath() {
+function selectCanvasPath() {
 	var props = 'fill:' + tool.color + ';stroke:none;';
 	this.setAttribute('style', props);
 }
@@ -53,14 +54,35 @@ function onButtonColorSwatch() {
 	tool.color = window.getComputedStyle(this).getPropertyValue('background-color');
 }
 
+function onMouseDown(e) {
+	tool.canvas.mouseDown = true;
+	selectCanvasPath.call(e.target);
+}
+
+function onMouseMove(e) {
+	if (tool.canvas.mouseDown) {
+		selectCanvasPath.call(e.target);
+	}
+}
+
+function onMouseUp() {
+	tool.canvas.mouseDown = false;
+}
+
 function initCanvas() {
 	tool.canvas.dom = document.getElementById(tool.canvas.id);
 	tool.canvas.doc = tool.canvas.dom.contentDocument;
 
 	var pathes = tool.canvas.doc.querySelectorAll('path');
     for (p = 0; p < pathes.length; ++p) {
-        pathes[p].addEventListener('click', onCanvasPath);
+        pathes[p].addEventListener('mousedown', onMouseDown);
+        pathes[p].addEventListener('mousemove', onMouseMove);
+        pathes[p].addEventListener('mouseup', onMouseUp);
     }
+
+	tool.canvas.doc.addEventListener('mousedown', onMouseDown);
+	tool.canvas.doc.addEventListener('mousemove', onMouseMove);
+	tool.canvas.doc.addEventListener('mouseup', onMouseUp);
 }
 
 function initButtons() {
