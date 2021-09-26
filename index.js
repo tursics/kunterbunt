@@ -8,6 +8,8 @@ var tool = {
 		doc: null,
 		id: '',
 		mouseDown: false,
+		mouseMove: null,
+		svg: null,
 	},
 	color: '#fff',
 	fileId: 0,
@@ -56,22 +58,28 @@ function onButtonColorSwatch() {
 
 function onMouseDown(e) {
 	tool.canvas.mouseDown = true;
-	selectCanvasPath.call(e.target);
+	if (e.target !== tool.canvas.svg) {
+		tool.canvas.mouseMove = e.target;
+		selectCanvasPath.call(e.target);
+	}
 }
 
 function onMouseMove(e) {
-	if (tool.canvas.mouseDown) {
+	if (tool.canvas.mouseDown && (tool.canvas.mouseMove !== e.target) && (e.target !== tool.canvas.svg)) {
+		tool.canvas.mouseMove = e.target;
 		selectCanvasPath.call(e.target);
 	}
 }
 
 function onMouseUp() {
 	tool.canvas.mouseDown = false;
+	tool.canvas.mouseMove = null;
 }
 
 function initCanvas() {
 	tool.canvas.dom = document.getElementById(tool.canvas.id);
 	tool.canvas.doc = tool.canvas.dom.contentDocument;
+	tool.canvas.svg = tool.canvas.doc.querySelectorAll('svg')[0];
 
 	var pathes = tool.canvas.doc.querySelectorAll('path');
     for (p = 0; p < pathes.length; ++p) {
