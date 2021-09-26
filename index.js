@@ -15,7 +15,7 @@ var tool = {
 	fileId: 0,
 	files: [
 		'media/duck.svg',
-		'media/duck-outline.svg',
+//		'media/duck-outline.svg',
 		'media/duck-frame.svg',
 	],
 };
