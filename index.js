@@ -1,7 +1,9 @@
 var tool = {
 	buttons: {
-		resetCanvasColors: null,
 		nextImage: null,
+		redo: null,
+		resetCanvasColors: null,
+		undo: null,
 	},
 	canvas: {
 		dom: null,
@@ -18,7 +20,19 @@ var tool = {
 //		'media/duck-outline.svg',
 		'media/duck-frame.svg',
 	],
+	history: {
+		redo: [],
+		undo: [],
+	},
 };
+
+function reloadImage() {
+	tool.canvas.dom.setAttribute('data', tool.files[tool.fileId]);
+
+	tool.history.undo = [];
+	tool.history.redo = [];
+	enableDisableButtons();
+}
 
 function onButtonResetCanvasColors() {
 	var pathes = tool.canvas.doc.querySelectorAll('path');
@@ -27,10 +41,10 @@ function onButtonResetCanvasColors() {
 		var props = 'fill:#fff;stroke:#aaa;stroke-width:0.1;';
 		pathes[p].setAttribute('style', props);
 	}
-}
 
-function reloadImage() {
-	tool.canvas.dom.setAttribute('data', tool.files[tool.fileId]);
+	tool.history.undo = [];
+	tool.history.redo = [];
+	enableDisableButtons();
 }
 
 function onButtonNextImage() {
@@ -42,7 +56,36 @@ function onButtonNextImage() {
 	reloadImage();
 }
 
+function onButtonUndo() {
+	var action = tool.history.undo.pop();
+	tool.history.redo.push({
+		path: action.path,
+		props: action.path.getAttribute('style'),
+	});
+	enableDisableButtons();
+
+	action.path.setAttribute('style', action.props);
+}
+
+function onButtonRedo() {
+	var action = tool.history.redo.pop();
+	tool.history.undo.push({
+		path: action.path,
+		props: action.path.getAttribute('style'),
+	});
+	enableDisableButtons();
+
+	action.path.setAttribute('style', action.props);
+}
+
 function selectCanvasPath() {
+	tool.history.undo.push({
+		path: this,
+		props: this.getAttribute('style'),
+	});
+	tool.history.redo = [];
+	enableDisableButtons();
+
 	var props = 'fill:' + tool.color + ';stroke:none;';
 	this.setAttribute('style', props);
 }
@@ -58,7 +101,7 @@ function onButtonColorSwatch() {
 
 function onMouseDown(e) {
 	tool.canvas.mouseDown = true;
-	if (e.target !== tool.canvas.svg) {
+	if ((tool.canvas.mouseMove !== e.target) && (e.target !== tool.canvas.svg)) {
 		tool.canvas.mouseMove = e.target;
 		selectCanvasPath.call(e.target);
 	}
@@ -74,6 +117,11 @@ function onMouseMove(e) {
 function onMouseUp() {
 	tool.canvas.mouseDown = false;
 	tool.canvas.mouseMove = null;
+}
+
+function enableDisableButtons() {
+	tool.buttons.undo.disabled = tool.history.undo.length === 0;
+	tool.buttons.redo.disabled = tool.history.redo.length === 0;
 }
 
 function initCanvas() {
@@ -100,12 +148,19 @@ function initButtons() {
 	tool.buttons.nextImage = document.getElementById('nextImage');
 	tool.buttons.nextImage.addEventListener('click', onButtonNextImage);
 
-    var swatches = document.getElementsByClassName('swatch');
+	tool.buttons.undo = document.getElementById('undo');
+	tool.buttons.undo.addEventListener('click', onButtonUndo);
+
+	tool.buttons.redo = document.getElementById('redo');
+	tool.buttons.redo.addEventListener('click', onButtonRedo);
+
+	var swatches = document.getElementsByClassName('swatch');
     for (var s = 0; s < swatches.length; ++s) {
         swatches[s].addEventListener('click', onButtonColorSwatch);
 	}
 
 	onButtonColorSwatch.call(document.querySelector('.swatch.red'));
+	enableDisableButtons();
 }
 
 window.addEventListener('load', function() {

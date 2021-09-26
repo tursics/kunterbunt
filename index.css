@@ -36,7 +36,7 @@ div {
 	width: calc(9rem + 2.5rem + 5px);
 }
 
-.tool #resetColor, .tool #nextImage {
+.tool #resetColor, .tool #nextImage, .tool #undo, .tool #redo {
 	background: #fff;
 	border: 2px solid #000;
 	border-radius: 1rem;
@@ -48,6 +48,9 @@ div {
 }
 .tool #nextImage {
 	margin: 0 0 1rem 0;
+}
+.tool #undo {
+	margin: .5rem 0 .5rem 0;
 }
 
 .tool .swatch {
