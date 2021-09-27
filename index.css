@@ -32,9 +32,12 @@ div {
 	color: #000;
 	left: 0;
 	line-height: 1rem;
+	overflow: scroll;
+	padding: 0 .75rem;
 	position: absolute;
 	right: 0;
 	text-align: center;
+	white-space: nowrap;
 }
 
 #graphic {
