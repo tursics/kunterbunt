@@ -6,19 +6,36 @@ var tool = {
 		undo: null,
 	},
 	canvas: {
+		attribtion: null,
 		dom: null,
 		doc: null,
 		id: '',
 		mouseDown: false,
 		mouseMove: null,
 		svg: null,
+		title: null,
 	},
 	color: '#fff',
 	fileId: 0,
 	files: [
-		'media/duck.svg',
-//		'media/duck-outline.svg',
-		'media/duck-frame.svg',
+		{
+			attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
+			dating: 'ca. 220-355',
+			license: 'CC BY-SA 3.0 DE',
+			material: 'Natursteine, Glas, Keramik',
+			path: 'media/duck.svg',
+			sourceFile: 'rba_d022237.jpg',
+			title: 'Dionysos-Mosaik, Stockente',
+		},
+		{
+			attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
+			dating: 'ca. 220-355',
+			license: 'CC BY-SA 3.0 DE',
+			material: 'Natursteine, Glas, Keramik',
+			path: 'media/duck-frame.svg',
+			sourceFile: 'rba_d022237.jpg',
+			title: 'Dionysos-Mosaik, Detailaufnahme, Stockente',
+		},
 	],
 	history: {
 		redo: [],
@@ -27,7 +44,9 @@ var tool = {
 };
 
 function reloadImage() {
-	tool.canvas.dom.setAttribute('data', tool.files[tool.fileId]);
+	tool.canvas.dom.setAttribute('data', tool.files[tool.fileId].path);
+	tool.canvas.title.innerHTML = tool.files[tool.fileId].title;
+	tool.canvas.attribtion.innerHTML = tool.files[tool.fileId].license + ': ' + tool.files[tool.fileId].attribution;
 
 	tool.history.undo = [];
 	tool.history.redo = [];
@@ -166,6 +185,8 @@ function initButtons() {
 window.addEventListener('load', function() {
 	tool.canvas.id = 'graphic';
 	tool.canvas.dom = document.getElementById(tool.canvas.id);
+	tool.canvas.attribtion = document.getElementById('imageAttribution');
+	tool.canvas.title = document.getElementById('imageTitle');
 
 	tool.canvas.dom.addEventListener('load', function() {
 		initCanvas();

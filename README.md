@@ -10,3 +10,9 @@ https://codingdavinci.de/daten/das-mosaik-einer-luxurioesen-stadtvilla-des-roemi
 
 CC BY-SA 3.0 DE
 Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / [Fotograf*in]
+
+## Software-Ideen
+
+- [Paint by number generator](https://drake7707.github.io/paintbynumbersgenerator/index.html)
+- [color by number](https://jsfiddle.net/shockey8oz/v54dqtgd/)
+- [Color by number pixel art](https://codepen.io/mathhulk/pen/VwaXOXR)
