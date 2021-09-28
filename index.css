@@ -135,6 +135,7 @@ div {
 	width: 3rem;
 }
 .tool button.circle:disabled {
+	cursor: default;
 	opacity: .25;
 }
 .tool button.iconPosition {
