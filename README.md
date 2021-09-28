@@ -6,10 +6,15 @@ Das Mosaik in einer luxuriösen Stadtvilla des römischen Köln
 
 Coding da Vinci Nieder.Rhein.Land 2021
 
-https://codingdavinci.de/daten/das-mosaik-einer-luxurioesen-stadtvilla-des-roemischen-koeln
+## Lizenzen
 
-CC BY-SA 3.0 DE
-Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / [Fotograf*in]
+Der Source-Code steht unter der freien **MIT**-Lizenz.
+
+Die Bilder stehen unter der freien **CC BY-SA 3.0 DE**-Lizenz mit dem Zusatz "Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / [Fotograf*in]".
+Mehr Infos hier: https://codingdavinci.de/daten/das-mosaik-einer-luxurioesen-stadtvilla-des-roemischen-koeln
+
+Die Icons stehen unter freien **CC BY 4.0**-Lizenz. Danke "Font Awesome".
+Mehr Infos hier: https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free
 
 ## Software-Ideen
 
