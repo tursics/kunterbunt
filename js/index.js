@@ -1,58 +1,9 @@
-var tool = {
-	buttons: {
-		nextImage: null,
-		positionNav: null,
-		redo: null,
-		resetCanvasColors: null,
-		undo: null,
-	},
-	canvas: {
-		attribtion: null,
-		dom: null,
-		doc: null,
-		id: '',
-		mouseDown: false,
-		mouseMove: null,
-		svg: null,
-		title: null,
-	},
-	color: '#fff',
-	fileId: 0,
-	files: [
-		{
-			attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
-			dating: 'ca. 220-355',
-			license: 'CC BY-SA 3.0 DE',
-			material: 'Natursteine, Glas, Keramik',
-			path: 'media/duck.svg',
-			sourceFile: 'rba_d022237.jpg',
-			title: 'Dionysos-Mosaik, Stockente',
-		},
-		{
-			attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
-			dating: 'ca. 220-355',
-			license: 'CC BY-SA 3.0 DE',
-			material: 'Natursteine, Glas, Keramik',
-			path: 'media/duck-frame.svg',
-			sourceFile: 'rba_d022237.jpg',
-			title: 'Dionysos-Mosaik, Detailaufnahme, Stockente',
-		},
-	],
-	history: {
-		redo: [],
-		undo: [],
-	},
-	navigation: '',
-};
-
 function reloadImage() {
 	tool.canvas.dom.setAttribute('data', tool.files[tool.fileId].path);
 	tool.canvas.title.innerHTML = tool.files[tool.fileId].title;
 	tool.canvas.attribtion.innerHTML = tool.files[tool.fileId].license + ': ' + tool.files[tool.fileId].attribution;
 
-	tool.history.undo = [];
-	tool.history.redo = [];
-	enableDisableButtons();
+	undo.reset();
 }
 
 function onButtonResetCanvasColors() {
@@ -63,9 +14,7 @@ function onButtonResetCanvasColors() {
 		pathes[p].setAttribute('style', props);
 	}
 
-	tool.history.undo = [];
-	tool.history.redo = [];
-	enableDisableButtons();
+	undo.reset();
 }
 
 function onButtonNextImage() {
@@ -77,35 +26,8 @@ function onButtonNextImage() {
 	reloadImage();
 }
 
-function onButtonUndo() {
-	var action = tool.history.undo.pop();
-	tool.history.redo.push({
-		path: action.path,
-		props: action.path.getAttribute('style'),
-	});
-	enableDisableButtons();
-
-	action.path.setAttribute('style', action.props);
-}
-
-function onButtonRedo() {
-	var action = tool.history.redo.pop();
-	tool.history.undo.push({
-		path: action.path,
-		props: action.path.getAttribute('style'),
-	});
-	enableDisableButtons();
-
-	action.path.setAttribute('style', action.props);
-}
-
 function selectCanvasPath() {
-	tool.history.undo.push({
-		path: this,
-		props: this.getAttribute('style'),
-	});
-	tool.history.redo = [];
-	enableDisableButtons();
+	undo.push(this);
 
 	var props = 'fill:' + tool.color + ';stroke:none;';
 	this.setAttribute('style', props);
@@ -168,11 +90,6 @@ function onMouseUp() {
 	tool.canvas.mouseMove = null;
 }
 
-function enableDisableButtons() {
-	tool.buttons.undo.disabled = tool.history.undo.length === 0;
-	tool.buttons.redo.disabled = tool.history.redo.length === 0;
-}
-
 function initCanvas() {
 	tool.canvas.dom = document.getElementById(tool.canvas.id);
 	tool.canvas.doc = tool.canvas.dom.contentDocument;
@@ -198,10 +115,10 @@ function initButtons() {
 	tool.buttons.nextImage.addEventListener('click', onButtonNextImage);
 
 	tool.buttons.undo = document.getElementById('undo');
-	tool.buttons.undo.addEventListener('click', onButtonUndo);
+	tool.buttons.undo.addEventListener('click', undo.undo);
 
 	tool.buttons.redo = document.getElementById('redo');
-	tool.buttons.redo.addEventListener('click', onButtonRedo);
+	tool.buttons.redo.addEventListener('click', undo.redo);
 
 	tool.buttons.positionNav = document.getElementById('positionNav');
 	tool.buttons.positionNav.addEventListener('click', onButtonPositionNav);
@@ -213,7 +130,7 @@ function initButtons() {
 
 	onButtonPositionNav();
 	onButtonColorSwatch.call(document.querySelector('.swatch.red'));
-	enableDisableButtons();
+	buttons.update();
 }
 
 window.addEventListener('load', function() {
@@ -221,6 +138,7 @@ window.addEventListener('load', function() {
 	tool.canvas.dom = document.getElementById(tool.canvas.id);
 	tool.canvas.attribtion = document.getElementById('imageAttribution');
 	tool.canvas.title = document.getElementById('imageTitle');
+	tool.files = mediaConfig;
 
 	tool.canvas.dom.addEventListener('load', function() {
 		initCanvas();
