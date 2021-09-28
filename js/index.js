@@ -108,17 +108,13 @@ function initCanvas() {
 }
 
 function initButtons() {
+	buttons.init();
+
 	tool.buttons.resetCanvasColors = document.getElementById('resetColor');
 	tool.buttons.resetCanvasColors.addEventListener('click', onButtonResetCanvasColors);
 
 	tool.buttons.nextImage = document.getElementById('nextImage');
 	tool.buttons.nextImage.addEventListener('click', onButtonNextImage);
-
-	tool.buttons.undo = document.getElementById('undo');
-	tool.buttons.undo.addEventListener('click', undo.undo);
-
-	tool.buttons.redo = document.getElementById('redo');
-	tool.buttons.redo.addEventListener('click', undo.redo);
 
 	tool.buttons.positionNav = document.getElementById('positionNav');
 	tool.buttons.positionNav.addEventListener('click', onButtonPositionNav);
