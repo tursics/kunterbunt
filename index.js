@@ -1,6 +1,7 @@
 var tool = {
 	buttons: {
 		nextImage: null,
+		positionNav: null,
 		redo: null,
 		resetCanvasColors: null,
 		undo: null,
@@ -41,6 +42,7 @@ var tool = {
 		redo: [],
 		undo: [],
 	},
+	navigation: '',
 };
 
 function reloadImage() {
@@ -118,6 +120,35 @@ function onButtonColorSwatch() {
 	tool.color = window.getComputedStyle(this).getPropertyValue('background-color');
 }
 
+function onButtonPositionNav() {
+	if (tool.navigation === 'left') {
+		document.body.classList.remove('toolLeft');
+		document.body.classList.add('toolTop');
+		tool.navigation = 'top';
+		tool.buttons.positionNav.innerHTML = 'Nach rechts';
+	} else if (tool.navigation === 'top') {
+		document.body.classList.remove('toolTop');
+		document.body.classList.add('toolRight');
+		tool.navigation = 'right';
+		tool.buttons.positionNav.innerHTML = 'Nach unten';
+	} else if (tool.navigation === 'right') {
+		document.body.classList.remove('toolRight');
+		document.body.classList.add('toolBottom');
+		tool.navigation = 'bottom';
+		tool.buttons.positionNav.innerHTML = 'Nach links';
+	} else if (tool.navigation === 'bottom') {
+		document.body.classList.remove('toolBottom');
+		document.body.classList.add('toolLeft');
+		tool.navigation = 'left';
+		tool.buttons.positionNav.innerHTML = 'Nach oben';
+	} else {
+		document.body.classList.remove('toolNone');
+		document.body.classList.add('toolLeft');
+		tool.navigation = 'left';
+		tool.buttons.positionNav.innerHTML = 'Nach oben';
+	}
+}
+
 function onMouseDown(e) {
 	tool.canvas.mouseDown = true;
 	if ((tool.canvas.mouseMove !== e.target) && (e.target !== tool.canvas.svg)) {
@@ -173,11 +204,15 @@ function initButtons() {
 	tool.buttons.redo = document.getElementById('redo');
 	tool.buttons.redo.addEventListener('click', onButtonRedo);
 
+	tool.buttons.positionNav = document.getElementById('positionNav');
+	tool.buttons.positionNav.addEventListener('click', onButtonPositionNav);
+
 	var swatches = document.getElementsByClassName('swatch');
     for (var s = 0; s < swatches.length; ++s) {
         swatches[s].addEventListener('click', onButtonColorSwatch);
 	}
 
+	onButtonPositionNav();
 	onButtonColorSwatch.call(document.querySelector('.swatch.red'));
 	enableDisableButtons();
 }

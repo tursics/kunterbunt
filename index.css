@@ -13,10 +13,31 @@ div {
 	padding: 2rem .25rem;
 	position: relative;
 }
+.toolNone .canvas {
+	float: left;
+	height: calc(100% - 4rem - 4px);
+	width: calc(100% - .5rem - 5px);
+}
 .toolRight .canvas {
 	float: left;
 	height: calc(100% - 4rem - 4px);
 	width: calc(100% - 9rem - 1.5rem - 5rem - 5px);
+}
+.toolLeft .canvas {
+	float: right;
+	height: calc(100% - 4rem - 4px);
+	width: calc(100% - 9rem - 1.5rem - 5rem - 5px);
+}
+.toolTop .canvas {
+	height: calc(100% - 9rem - 4rem - 4px);
+	position: sticky;
+	top: 10rem;
+	width: calc(100% - .5rem - 5px);	
+}
+.toolBottom .canvas {
+	float: left;
+	height: calc(100% - 9rem - 4rem - 4px);
+	width: calc(100% - .5rem - 5px);
 }
 
 #imageTitle {
@@ -52,20 +73,45 @@ div {
 	overflow: hidden;
 	padding: 1rem;
 }
+.toolNone .tool {
+	display: none;
+}
 .toolRight .tool {
 	float: right;
 	height: calc(100% - 2rem - 4px);
 	width: calc(9rem + 2.5rem + 5px);
 }
+.toolLeft .tool {
+	float: left;
+	height: calc(100% - 2rem - 4px);
+	width: calc(9rem + 2.5rem + 5px);
+}
+.toolTop .tool {
+	height: 6rem;
+	left: calc(1rem + 1px);
+	position: absolute;
+	right: calc(1rem + 1px);
+	top: 1rem;
+}
+.toolBottom .tool {
+	float: right;
+	height: 6rem;
+	margin-top: 1rem;
+	width: calc(100% - 2rem - 5px);
+}
 
-.tool #resetColor, .tool #nextImage, .tool #undo, .tool #redo {
+.tool #resetColor, .tool #nextImage, .tool #undo, .tool #redo, .tool #positionNav {
 	background: #fff;
 	border: 2px solid #000;
 	border-radius: 1rem;
 	height: 3rem;
 	width: 100%;
 }
-.tool #resetColor {
+.toolTop .tool #resetColor, .toolTop .tool #nextImage, .toolTop .tool #undo, .toolTop .tool #redo, .toolTop .tool #positionNav,
+.toolBottom .tool #resetColor, .toolBottom .tool #nextImage, .toolBottom .tool #undo, .toolBottom .tool #redo, .toolBottom .tool #positionNav {
+	width: 10%;
+}
+.tool #resetColor, .tool #redo {
 	margin: 0 0 .5rem 0;
 }
 .tool #nextImage {
