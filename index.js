@@ -125,27 +125,22 @@ function onButtonPositionNav() {
 		document.body.classList.remove('toolLeft');
 		document.body.classList.add('toolTop');
 		tool.navigation = 'top';
-		tool.buttons.positionNav.innerHTML = 'Nach rechts';
 	} else if (tool.navigation === 'top') {
 		document.body.classList.remove('toolTop');
 		document.body.classList.add('toolRight');
 		tool.navigation = 'right';
-		tool.buttons.positionNav.innerHTML = 'Nach unten';
 	} else if (tool.navigation === 'right') {
 		document.body.classList.remove('toolRight');
 		document.body.classList.add('toolBottom');
 		tool.navigation = 'bottom';
-		tool.buttons.positionNav.innerHTML = 'Nach links';
 	} else if (tool.navigation === 'bottom') {
 		document.body.classList.remove('toolBottom');
 		document.body.classList.add('toolLeft');
 		tool.navigation = 'left';
-		tool.buttons.positionNav.innerHTML = 'Nach oben';
 	} else {
 		document.body.classList.remove('toolNone');
 		document.body.classList.add('toolLeft');
 		tool.navigation = 'left';
-		tool.buttons.positionNav.innerHTML = 'Nach oben';
 	}
 }
 

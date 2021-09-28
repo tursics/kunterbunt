@@ -103,25 +103,60 @@ div {
 	right: calc(1rem + 1px);
 }
 
-.tool #resetColor, .tool #nextImage, .tool #undo, .tool #redo, .tool #positionNav {
+.tool #resetColor, .tool #nextImage {
 	background: #fff;
 	border: 2px solid #000;
 	border-radius: 1rem;
 	height: 3rem;
 	width: 100%;
 }
-.toolTop .tool #resetColor, .toolTop .tool #nextImage, .toolTop .tool #undo, .toolTop .tool #redo, .toolTop .tool #positionNav,
-.toolBottom .tool #resetColor, .toolBottom .tool #nextImage, .toolBottom .tool #undo, .toolBottom .tool #redo, .toolBottom .tool #positionNav {
+.toolTop .tool #resetColor, .toolTop .tool #nextImage,
+.toolBottom .tool #resetColor, .toolBottom .tool #nextImage {
 	width: 10%;
 }
-.tool #resetColor, .tool #redo {
+.tool #resetColor {
 	margin: 0 0 .5rem 0;
 }
 .tool #nextImage {
 	margin: 0 0 1rem 0;
 }
-.tool #undo {
-	margin: .5rem 0 .5rem 0;
+
+.tool button.circle {
+	background: #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1.25rem;
+	border: 2px solid #000;
+	border-radius: 3rem;
+	cursor: pointer;
+	display: inline-grid;
+	height: 3rem;
+	margin: calc(.5rem - 2px);
+	width: 3rem;
+}
+.tool button.circle:disabled {
+	opacity: .25;
+}
+.tool button.iconPosition {
+	background-image: url(assets/sign-in-alt-solid.svg);
+}
+.tool button.iconRedo {
+	background-image: url(assets/redo-solid.svg);
+}
+.tool button.iconUndo {
+	background-image: url(assets/undo-solid.svg);
+}
+.toolTop .tool button.iconPosition {
+	transform: rotate(0deg);
+}
+.toolLeft .tool button.iconPosition {
+	transform: rotate(270deg);
+}
+.toolRight .tool button.iconPosition {
+	transform: rotate(90deg);
+}
+.toolBottom .tool button.iconPosition {
+	transform: rotate(180deg);
 }
 
 .tool .swatch {
