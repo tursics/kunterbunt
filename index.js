@@ -150,6 +150,10 @@ function onButtonPositionNav() {
 }
 
 function onMouseDown(e) {
+	if (e.which !== 1) {
+		return;
+	}
+
 	tool.canvas.mouseDown = true;
 	if ((tool.canvas.mouseMove !== e.target) && (e.target !== tool.canvas.svg)) {
 		tool.canvas.mouseMove = e.target;
