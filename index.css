@@ -10,13 +10,13 @@ div {
 .canvas {
 	border: 2px solid #000;
 	border-radius: 1rem;
-	padding: 1rem;
+	padding: 2rem .25rem;
 	position: relative;
 }
 .toolRight .canvas {
 	float: left;
-	height: calc(100% - 2rem - 4px);
-	width: calc(100% - 9rem - 3rem - 5rem - 5px);
+	height: calc(100% - 4rem - 4px);
+	width: calc(100% - 9rem - 1.5rem - 5rem - 5px);
 }
 
 #imageTitle {
@@ -31,7 +31,7 @@ div {
 	background: #bcc;
 	color: #000;
 	left: 0;
-	line-height: 1rem;
+	line-height: 1.75rem;
 	overflow: scroll;
 	padding: 0 .75rem;
 	position: absolute;
