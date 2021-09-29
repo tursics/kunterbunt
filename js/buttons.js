@@ -5,6 +5,12 @@ var buttons = {
 
 		tool.buttons.redo = document.getElementById('redo');
 		tool.buttons.redo.addEventListener('click', undo.redo);
+
+		tool.buttons.colorSwatch = document.getElementsByClassName('swatch');
+		for (var s = 0; s < tool.buttons.colorSwatch.length; ++s) {
+			tool.buttons.colorSwatch[s].addEventListener('click', colors.setWithThis);
+		}
+		colors.setWithObject(tool.buttons.colorSwatch[0]);
 	},
 
 	update: function() {

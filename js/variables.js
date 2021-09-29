@@ -1,5 +1,6 @@
 var tool = {
 	buttons: {
+		colorSwatch: [],
 		nextImage: null,
 		positionNav: null,
 		redo: null,

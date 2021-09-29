@@ -163,6 +163,7 @@ div {
 .tool .swatch {
 	border: .5rem solid #bcc;
 	border-radius: 3rem;
+	cursor: pointer;
 	height: 3rem;
 	margin: -2px;
 	transform: rotate(0deg);
@@ -176,32 +177,32 @@ div {
 }
 
 .tool .swatch.black {
-  background: #000;
+	background: #000;
 }
 .tool .swatch.blue {
-  background: #00f;
+	background: #00f;
 }
 .tool .swatch.brown {
-  background: #a52a2a;
+	background: #a52a2a;
 }
 .tool .swatch.green {
-  background: #008000;
+	background: #008000;
 }
 .tool .swatch.orange {
-  background: #ffa500;
+	background: #ffa500;
 }
 .tool .swatch.pink {
-  background: #ffc0cb;
+	background: #ffc0cb;
 }
 .tool .swatch.purple {
-  background: #800080;
+	background: #800080;
 }
 .tool .swatch.red {
-  background: #f00;
+	background: #f00;
 }
 .tool .swatch.white {
-  background: #fff;
+	background: #fff;
 }
 .tool .swatch.yellow {
-  background: #ffff00;
+	background: #ffff00;
 }
