@@ -26,30 +26,6 @@ function onButtonNextImage() {
 	reloadImage();
 }
 
-function onButtonPositionNav() {
-	if (tool.navigation === 'left') {
-		document.body.classList.remove('toolLeft');
-		document.body.classList.add('toolTop');
-		tool.navigation = 'top';
-	} else if (tool.navigation === 'top') {
-		document.body.classList.remove('toolTop');
-		document.body.classList.add('toolRight');
-		tool.navigation = 'right';
-	} else if (tool.navigation === 'right') {
-		document.body.classList.remove('toolRight');
-		document.body.classList.add('toolBottom');
-		tool.navigation = 'bottom';
-	} else if (tool.navigation === 'bottom') {
-		document.body.classList.remove('toolBottom');
-		document.body.classList.add('toolLeft');
-		tool.navigation = 'left';
-	} else {
-		document.body.classList.remove('toolNone');
-		document.body.classList.add('toolLeft');
-		tool.navigation = 'left';
-	}
-}
-
 function initButtons() {
 	buttons.init();
 
@@ -59,10 +35,6 @@ function initButtons() {
 	tool.buttons.nextImage = document.getElementById('nextImage');
 	tool.buttons.nextImage.addEventListener('click', onButtonNextImage);
 
-	tool.buttons.positionNav = document.getElementById('positionNav');
-	tool.buttons.positionNav.addEventListener('click', onButtonPositionNav);
-
-	onButtonPositionNav();
 	buttons.update();
 }
 

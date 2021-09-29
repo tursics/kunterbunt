@@ -11,10 +11,38 @@ var buttons = {
 			tool.buttons.colorSwatch[s].addEventListener('click', colors.setWithThis);
 		}
 		colors.setWithObject(tool.buttons.colorSwatch[0]);
+
+		tool.buttons.positionNav = document.getElementById('positionNav');
+		tool.buttons.positionNav.addEventListener('click', buttons.moveNavigation);
+		buttons.moveNavigation();
 	},
 
 	update: function() {
 		tool.buttons.undo.disabled = tool.history.undo.length === 0;
 		tool.buttons.redo.disabled = tool.history.redo.length === 0;
+	},
+
+	moveNavigation: function() {
+		if (tool.navigation === 'left') {
+			document.body.classList.remove('toolLeft');
+			document.body.classList.add('toolTop');
+			tool.navigation = 'top';
+		} else if (tool.navigation === 'top') {
+			document.body.classList.remove('toolTop');
+			document.body.classList.add('toolRight');
+			tool.navigation = 'right';
+		} else if (tool.navigation === 'right') {
+			document.body.classList.remove('toolRight');
+			document.body.classList.add('toolBottom');
+			tool.navigation = 'bottom';
+		} else if (tool.navigation === 'bottom') {
+			document.body.classList.remove('toolBottom');
+			document.body.classList.add('toolLeft');
+			tool.navigation = 'left';
+		} else {
+			document.body.classList.remove('toolNone');
+			document.body.classList.add('toolLeft');
+			tool.navigation = 'left';
+		}
 	},
 };
