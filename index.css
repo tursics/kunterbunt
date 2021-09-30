@@ -74,6 +74,7 @@ div {
 	overflow: hidden;
 	padding: 1rem;
 	position: absolute;
+	z-index: 11;
 }
 .toolNone .tool {
 	display: none;
@@ -101,6 +102,55 @@ div {
 	height: 6rem;
 	left: calc(1rem + 1px);
 	right: calc(1rem + 1px);
+}
+
+.subtools {
+	background: #bcc;
+	border: 2px #000 solid;
+	border-radius: 1rem;
+	overflow: hidden;
+	padding: 1rem;
+	position: absolute;
+	text-align: center;
+	transition: top 500ms ease, left 500ms ease, right 500ms ease, bottom 500ms ease;
+	z-index: 10;
+}
+.toolTop .subtools {
+	top: 1rem;
+	left: 2rem;
+	padding-top: 3rem;
+	right: 2rem;
+}
+.toolTop .subtools.expanded {
+	top: 7rem;
+}
+.toolLeft .subtools {
+	bottom: 1rem;
+	left: 1rem;
+	padding-left: 3rem;
+}
+.toolLeft .subtools.expanded {
+	left: 13rem;
+}
+.toolRight .subtools {
+	bottom: 1rem;
+	padding-right: 3rem;
+	right: 1rem;
+}
+.toolRight .subtools.expanded {
+	right: 13rem;
+}
+.toolBottom .subtools {
+	bottom: 1rem;
+	left: 2rem;
+	padding-bottom: 3rem;
+	right: 2rem;
+}
+.toolBottom .subtools.expanded {
+	bottom: 7rem;
+}
+.toolNone .subtools {
+	display: none;
 }
 
 .tool #resetColor, .tool #nextImage {
@@ -137,6 +187,9 @@ div {
 .tool button.circle:disabled {
 	cursor: default;
 	opacity: .25;
+}
+.tool button.iconBrush {
+	background-image: url(assets/paint-brush-solid.svg);
 }
 .tool button.iconPosition {
 	background-image: url(assets/sign-in-alt-solid.svg);

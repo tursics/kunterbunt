@@ -1,5 +1,6 @@
 var tool = {
 	buttons: {
+		brush: null,
 		colorSwatch: [],
 		nextImage: null,
 		positionNav: null,
@@ -25,4 +26,5 @@ var tool = {
 		undo: [],
 	},
 	navigation: '',
+	subTools: null,
 };

@@ -6,6 +6,11 @@ var buttons = {
 		tool.buttons.redo = document.getElementById('redo');
 		tool.buttons.redo.addEventListener('click', undo.redo);
 
+		tool.subTools = document.querySelector('.subtools');
+
+		tool.buttons.brush = document.getElementById('brush');
+		tool.buttons.brush.addEventListener('click', buttons.toggleSubTools);
+
 		tool.buttons.colorSwatch = document.getElementsByClassName('swatch');
 		for (var s = 0; s < tool.buttons.colorSwatch.length; ++s) {
 			tool.buttons.colorSwatch[s].addEventListener('click', colors.setWithThis);
@@ -20,6 +25,10 @@ var buttons = {
 	update: function() {
 		tool.buttons.undo.disabled = tool.history.undo.length === 0;
 		tool.buttons.redo.disabled = tool.history.redo.length === 0;
+	},
+
+	toggleSubTools: function() {
+		tool.subTools.classList.toggle('expanded');
 	},
 
 	moveNavigation: function() {
