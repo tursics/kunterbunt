@@ -21,3 +21,4 @@ Mehr Infos hier: https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free
 - [Paint by number generator](https://drake7707.github.io/paintbynumbersgenerator/index.html)
 - [color by number](https://jsfiddle.net/shockey8oz/v54dqtgd/)
 - [Color by number pixel art](https://codepen.io/mathhulk/pen/VwaXOXR)
+- [Popular Color Palettes](https://www.color-hex.com/color-palettes/popular.php)

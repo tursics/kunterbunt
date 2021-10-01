@@ -15,7 +15,7 @@ var buttons = {
 		for (var s = 0; s < tool.buttons.colorSwatch.length; ++s) {
 			tool.buttons.colorSwatch[s].addEventListener('click', colors.setWithThis);
 		}
-		colors.setWithObject(tool.buttons.colorSwatch[0]);
+		colors.init();
 
 		tool.buttons.positionNav = document.getElementById('positionNav');
 		tool.buttons.positionNav.addEventListener('click', buttons.moveNavigation);

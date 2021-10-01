@@ -19,6 +19,7 @@ var tool = {
 		title: null,
 	},
 	color: '#fff',
+	colorPalette: [],
 	fileId: 0,
 	files: [],
 	history: {

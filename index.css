@@ -109,16 +109,16 @@ div {
 	border: 2px #000 solid;
 	border-radius: 1rem;
 	overflow: hidden;
-	padding: 1rem;
+	padding: .2rem;
 	position: absolute;
 	text-align: center;
-	transition: top 500ms ease, left 500ms ease, right 500ms ease, bottom 500ms ease;
+	transition: top 500ms ease, left 500ms ease, right 500ms ease, bottom 500ms ease, width 500ms ease;
 	z-index: 10;
 }
 .toolTop .subtools {
 	top: 1rem;
 	left: 2rem;
-	padding-top: 3rem;
+	padding-top: 2.2rem;
 	right: 2rem;
 }
 .toolTop .subtools.expanded {
@@ -127,23 +127,31 @@ div {
 .toolLeft .subtools {
 	bottom: 1rem;
 	left: 1rem;
-	padding-left: 3rem;
+	overflow: hidden;
+	padding-left: 2.2rem;
+	white-space: nowrap;
+	width: 0;
 }
 .toolLeft .subtools.expanded {
 	left: 13rem;
+	width: auto;
 }
 .toolRight .subtools {
 	bottom: 1rem;
-	padding-right: 3rem;
+	overflow: hidden;
+	padding-right: 2.2rem;
 	right: 1rem;
+	white-space: nowrap;
+	width: 0;
 }
 .toolRight .subtools.expanded {
 	right: 13rem;
+	width: auto;
 }
 .toolBottom .subtools {
 	bottom: 1rem;
 	left: 2rem;
-	padding-bottom: 3rem;
+	padding-bottom: 2.2rem;
 	right: 2rem;
 }
 .toolBottom .subtools.expanded {
@@ -213,49 +221,17 @@ div {
 	transform: rotate(180deg);
 }
 
-.tool .swatch {
+.subtools .swatch {
 	border: .5rem solid #bcc;
 	border-radius: 3rem;
 	cursor: pointer;
 	height: 3rem;
-	margin: -2px;
+	margin: 0 -2px -4px -2px;
 	transform: rotate(0deg);
 	transition: transform 600ms ease, border-top-color 150ms ease, border-left-color 300ms ease, border-right-color 450ms ease, border-bottom-color 600ms ease;
 	width: 3rem;
 }
-
-.tool .swatch.active {
+.subtools .swatch.active {
 	border-color: #fff;
 	transform: rotate(180deg);
-}
-
-.tool .swatch.black {
-	background: #000;
-}
-.tool .swatch.blue {
-	background: #00f;
-}
-.tool .swatch.brown {
-	background: #a52a2a;
-}
-.tool .swatch.green {
-	background: #008000;
-}
-.tool .swatch.orange {
-	background: #ffa500;
-}
-.tool .swatch.pink {
-	background: #ffc0cb;
-}
-.tool .swatch.purple {
-	background: #800080;
-}
-.tool .swatch.red {
-	background: #f00;
-}
-.tool .swatch.white {
-	background: #fff;
-}
-.tool .swatch.yellow {
-	background: #ffff00;
 }
