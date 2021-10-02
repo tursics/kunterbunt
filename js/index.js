@@ -52,6 +52,7 @@ function closeDialog() {
 }
 
 window.addEventListener('load', function() {
+	tool.colorPalette = mediaColorSwatch;
 	tool.files = mediaConfig;
 
 	paint.init();

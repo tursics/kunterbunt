@@ -1,8 +1,10 @@
 var colors = {
 	init: function() {
-		tool.colorPalette = ['#66545e', '#a39193', '#aa6f73', '#eea990', '#f6e0b5'];
+		var id = 1;
+		var palette = tool.colorPalette[id].colors;
 		for (var s = 0; s < tool.buttons.colorSwatch.length; ++s) {
-			tool.buttons.colorSwatch[s].style.backgroundColor = tool.colorPalette[s];
+			tool.buttons.colorSwatch[s].style.backgroundColor = palette[s];
+			tool.buttons.colorSwatch[s].style.display = s < palette.length ? 'inline-block' : 'none';
 		}
 		colors.setWithObject(tool.buttons.colorSwatch[0]);
 	},
