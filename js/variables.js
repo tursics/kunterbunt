@@ -23,6 +23,7 @@ var tool = {
 	colorPalette: [],
 	dialog: {
 		background: null,
+		pages: [],
 	},
 	fileId: 0,
 	files: [],

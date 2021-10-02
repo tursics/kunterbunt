@@ -13,11 +13,11 @@ var mediaColorSwatch = [
 	},
 	{
 		colors: ['#ffadad','#ffd6a5','#fdffb6','#caffbf','#9bf6ff','#a0c4ff','#bdb2ff','#ffc6ff','#fffffc'],
-		title: 'Farben D',
+		title: 'Heller Regenbogen',
 	},
 	{
 		colors: ['#03071e','#370617','#6a040f','#9d0208','#d00000','#dc2f02','#e85d04','#f48c06','#faa307','#ffba08'],
-		title: 'Farben E',
+		title: 'Deutschland',
 	},
 	{
 		colors: ['#9b5de5','#f15bb5','#fee440','#00bbf9','#00f5d4'],
@@ -25,6 +25,6 @@ var mediaColorSwatch = [
 	},
 	{
 		colors: ['#ffbe0b','#fb5607','#ff006e','#8338ec','#3a86ff'],
-		title: 'Farben G',
+		title: 'Kräftige Farben',
 	},
 ];

@@ -251,3 +251,16 @@ div {
 .dialog.hidden {
 	display: none;
 }
+
+.dialog .page {
+	background: #fff;
+	bottom: 25%;
+	display: none;
+	left: 25%;
+	position: absolute;
+	right: 25%;
+	top: 25%;
+}
+.dialog .page.show {
+	display: block;
+}

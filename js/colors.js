@@ -1,12 +1,8 @@
 var colors = {
 	init: function() {
-		var id = 1;
-		var palette = tool.colorPalette[id].colors;
-		for (var s = 0; s < tool.buttons.colorSwatch.length; ++s) {
-			tool.buttons.colorSwatch[s].style.backgroundColor = palette[s];
-			tool.buttons.colorSwatch[s].style.display = s < palette.length ? 'inline-block' : 'none';
-		}
-		colors.setWithObject(tool.buttons.colorSwatch[0]);
+		dialog.push(document.querySelector('.dialog .palette'));
+
+		colors.selectPaletteById(1);
 	},
 
 	setWithObject: function(obj) {
@@ -22,7 +18,32 @@ var colors = {
 		colors.setWithObject(this);
 	},
 
+	selectPaletteById: function(id) {
+		var palette = tool.colorPalette[id].colors;
+		for (var s = 0; s < tool.buttons.colorSwatch.length; ++s) {
+			tool.buttons.colorSwatch[s].style.backgroundColor = palette[s];
+			tool.buttons.colorSwatch[s].style.display = s < palette.length ? 'inline-block' : 'none';
+		}
+		colors.setWithObject(tool.buttons.colorSwatch[0]);
+	},
+
+	selectPalette: function(id) {
+		dialog.close();
+		colors.selectPaletteById(id);
+	},
+
 	openPalette: function() {
+		var html = '';
+
+		for (var c = 0; c < tool.colorPalette.length; ++c) {
+			var colorPalette = tool.colorPalette[c];
+
+			html += '<li><a onClick="colors.selectPalette(' + c + ');">' + colorPalette.title + '</a></li>';
+		}
+
+		html = '<ul>' + html + '</ul>';
+
+		dialog.setContent('palette', html);
 		dialog.show('palette');
 	},
 };
