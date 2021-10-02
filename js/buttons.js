@@ -8,6 +8,9 @@ var buttons = {
 
 		tool.subTools = document.querySelector('.subtools');
 
+		tool.buttons.palette = document.getElementById('palette');
+		tool.buttons.palette.addEventListener('click', colors.openPalette);
+
 		tool.buttons.brush = document.getElementById('brush');
 		tool.buttons.brush.addEventListener('click', buttons.toggleSubTools);
 

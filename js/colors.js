@@ -19,4 +19,8 @@ var colors = {
 	setWithThis: function() {
 		colors.setWithObject(this);
 	},
+
+	openPalette: function() {
+		showDialog('palette');
+	},
 };

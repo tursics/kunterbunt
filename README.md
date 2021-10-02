@@ -21,4 +21,10 @@ Mehr Infos hier: https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free
 - [Paint by number generator](https://drake7707.github.io/paintbynumbersgenerator/index.html)
 - [color by number](https://jsfiddle.net/shockey8oz/v54dqtgd/)
 - [Color by number pixel art](https://codepen.io/mathhulk/pen/VwaXOXR)
+- [Trending color palettes](https://coolors.co/palettes/trending)
+  - Do I need special permissions to use your colors?
+  - No, you don't. Our colors and their combination are not protected by any kind of copyright or intellectual property. You can, therefore, use them freely without any permission or any reference to Coolors
+  - https://help.coolors.co/hc/en-us/articles/360010649799-Do-I-need-special-permissions-to-use-your-colors-
 - [Popular Color Palettes](https://www.color-hex.com/color-palettes/popular.php)
+- https://digitalsynopsis.com/design/beautiful-color-palettes-combinations-schemes/
+- https://digitalsynopsis.com/design/minimal-web-color-palettes-combination-hex-code/

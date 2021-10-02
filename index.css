@@ -199,6 +199,9 @@ div {
 .tool button.iconBrush {
 	background-image: url(assets/paint-brush-solid.svg);
 }
+.tool button.iconPalette {
+	background-image: url(assets/palette-solid.svg);
+}
 .tool button.iconPosition {
 	background-image: url(assets/sign-in-alt-solid.svg);
 }
@@ -234,4 +237,17 @@ div {
 .subtools .swatch.active {
 	border-color: #fff;
 	transform: rotate(180deg);
+}
+
+.dialog {
+	background: #00000080;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 20;
+}
+.dialog.hidden {
+	display: none;
 }

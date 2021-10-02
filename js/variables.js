@@ -3,6 +3,7 @@ var tool = {
 		brush: null,
 		colorSwatch: [],
 		nextImage: null,
+		palette: null,
 		positionNav: null,
 		redo: null,
 		resetCanvasColors: null,
@@ -20,6 +21,9 @@ var tool = {
 	},
 	color: '#fff',
 	colorPalette: [],
+	dialog: {
+		background: null,
+	},
 	fileId: 0,
 	files: [],
 	history: {
