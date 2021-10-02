@@ -23,6 +23,6 @@ var colors = {
 	},
 
 	openPalette: function() {
-		showDialog('palette');
+		dialog.show('palette');
 	},
 };

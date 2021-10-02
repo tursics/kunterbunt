@@ -38,19 +38,6 @@ function initButtons() {
 	buttons.update();
 }
 
-function initDialog() {
-	tool.dialog.background = document.querySelector('.dialog');
-	tool.dialog.background.addEventListener('click', closeDialog);
-}
-
-function showDialog(name) {
-	tool.dialog.background.classList.remove('hidden');
-}
-
-function closeDialog() {
-	tool.dialog.background.classList.add('hidden');
-}
-
 window.addEventListener('load', function() {
 	tool.colorPalette = mediaColorSwatch;
 	tool.files = mediaConfig;
@@ -60,5 +47,5 @@ window.addEventListener('load', function() {
 	initButtons();
 	reloadImage();
 
-	initDialog();
+	dialog.init();
 });
