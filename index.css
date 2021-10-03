@@ -312,6 +312,7 @@ div {
 	white-space: nowrap;
 }
 .dialog .page.palette svg {
+	border-radius: .5rem;
 	height: 3.5rem;
 	width: 13rem;
 }
