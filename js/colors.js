@@ -32,13 +32,30 @@ var colors = {
 		colors.selectPaletteById(id);
 	},
 
+	generateSVGPalette: function(colorPalette) {
+		var svg = '<svg viewBox="0 0 100 25" preserveAspectRatio="none">';
+		var width = 100 / colorPalette.colors.length;
+
+		for (var c = 0; c < colorPalette.colors.length; ++c) {
+			var color = colorPalette.colors[c];
+			svg += '<rect x="' + (c * width) + '" y="0" width="' + width + '" height="25" style="fill:' + color + '"/>';
+		}
+
+		svg += '</svg>';
+		return svg;
+	},
+
 	openPalette: function() {
 		var html = '';
 
 		for (var c = 0; c < tool.colorPalette.length; ++c) {
 			var colorPalette = tool.colorPalette[c];
 
-			html += '<li><a onClick="colors.selectPalette(' + c + ');">' + colorPalette.title + '</a></li>';
+			html += '<li onClick="colors.selectPalette(' + c + ');">';
+			html += '<span class="emoji">' + colorPalette.emoji + '</span>';
+			html += '<span class="img">' + colors.generateSVGPalette(colorPalette) + '</span>';
+			html += '<span class="title">' + colorPalette.title + '</span>';
+			html += '</li>';
 		}
 
 		html = '<ul>' + html + '</ul>';

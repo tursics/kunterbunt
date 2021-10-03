@@ -255,12 +255,56 @@ div {
 .dialog .page {
 	background: #fff;
 	bottom: 25%;
+	border: 2px solid #000;
+	border-radius: 1rem;
 	display: none;
 	left: 25%;
+	overflow-y: scroll;
 	position: absolute;
 	right: 25%;
 	top: 25%;
 }
 .dialog .page.show {
 	display: block;
+}
+
+.dialog .page.palette ul {
+	list-style-type: none;
+	padding-left: 1rem;
+}
+.dialog .page.palette li {
+	cursor: pointer;
+	display: inline-block;
+	line-height: 2rem;
+	margin: .5rem;
+	overflow: hidden;
+	position: relative;
+	width: 13rem;
+}
+.dialog .page.palette .emoji {
+	background: #ffffffc0;
+    border-radius: 2rem;
+	font-size: 1.5rem;
+	left: .5rem;
+	line-height: 2.5rem;
+	position: absolute;
+	text-align: center;
+	top: .5rem;
+    width: 2.5rem;
+}
+.dialog .page.palette .img {
+	float: left;
+}
+.dialog .page.palette .title {
+	background: #ffffffc0;
+	border-radius: .3rem;
+	float: left;
+	line-height: 1.5rem;
+	margin: -2.5rem 0 0 3.25rem;
+	padding: 0 .5rem 0 .5rem;
+	white-space: nowrap;
+}
+.dialog .page.palette svg {
+	height: 3.5rem;
+	width: 13rem;
 }
