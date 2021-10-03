@@ -108,11 +108,12 @@ div {
 	background: #bcc;
 	border: 2px #000 solid;
 	border-radius: 1rem;
-	overflow: hidden;
+	overflow: scroll;
 	padding: .2rem;
 	position: absolute;
 	text-align: center;
 	transition: top 500ms ease, left 500ms ease, right 500ms ease, bottom 500ms ease, width 500ms ease;
+	white-space: nowrap;
 	z-index: 10;
 }
 .toolTop .subtools {
@@ -127,24 +128,22 @@ div {
 .toolLeft .subtools {
 	bottom: 1rem;
 	left: 1rem;
-	overflow: hidden;
 	padding-left: 2.2rem;
-	white-space: nowrap;
 	width: 0;
 }
 .toolLeft .subtools.expanded {
 	left: 13rem;
+	max-width: calc(100% - 16.6rem);
 	width: auto;
 }
 .toolRight .subtools {
 	bottom: 1rem;
-	overflow: hidden;
 	padding-right: 2.2rem;
 	right: 1rem;
-	white-space: nowrap;
 	width: 0;
 }
 .toolRight .subtools.expanded {
+	max-width: calc(100% - 16.6rem);
 	right: 13rem;
 	width: auto;
 }
@@ -263,6 +262,14 @@ div {
 	position: absolute;
 	right: 25%;
 	top: 25%;
+}
+@media only screen and (max-width: 30rem) {
+	.dialog .page {
+		bottom: 4rem;
+		left: .5rem;
+		right: .5rem;
+		top: 4rem;
+	}
 }
 .dialog .page.show {
 	display: block;
