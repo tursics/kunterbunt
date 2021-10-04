@@ -198,6 +198,9 @@ div {
 .tool button.iconBrush {
 	background-image: url(assets/paint-brush-solid.svg);
 }
+.tool button.iconClose {
+	background-image: url(assets/times-solid.svg);
+}
 .tool button.iconPalette {
 	background-image: url(assets/palette-solid.svg);
 }
@@ -238,6 +241,10 @@ div {
 	transform: rotate(180deg);
 }
 
+.hidden {
+	display: none;
+}
+
 .dialog {
 	background: #00000080;
 	bottom: 0;
@@ -246,9 +253,6 @@ div {
 	right: 0;
 	top: 0;
 	z-index: 20;
-}
-.dialog.hidden {
-	display: none;
 }
 
 .dialog .page {

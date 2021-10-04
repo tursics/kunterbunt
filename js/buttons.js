@@ -1,12 +1,16 @@
 var buttons = {
 	init: function() {
+		tool.tools = document.querySelector('.tool');
+		tool.subTools = document.querySelector('.subtools');
+
+		tool.buttons.close = document.getElementById('close');
+		tool.buttons.close.addEventListener('click', menu.closeImage);
+
 		tool.buttons.undo = document.getElementById('undo');
 		tool.buttons.undo.addEventListener('click', undo.undo);
 
 		tool.buttons.redo = document.getElementById('redo');
 		tool.buttons.redo.addEventListener('click', undo.redo);
-
-		tool.subTools = document.querySelector('.subtools');
 
 		tool.buttons.palette = document.getElementById('palette');
 		tool.buttons.palette.addEventListener('click', colors.openPalette);

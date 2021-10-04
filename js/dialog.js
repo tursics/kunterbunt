@@ -1,7 +1,7 @@
 var dialog = {
 	init: function() {
 		tool.dialog.background = document.querySelector('.dialog');
-		tool.dialog.background.addEventListener('click', dialog.close);
+		tool.dialog.background.addEventListener('click', dialog.clickBackground);
 	},
 
 	push: function(obj) {
@@ -29,6 +29,17 @@ var dialog = {
 				page.classList.remove('show');
 			}
 		}
+	},
+
+	clickBackground: function() {
+		for (var p = 0; p < tool.dialog.pages.length; ++p) {
+			var page = tool.dialog.pages[p];
+			if (page.classList.contains('show') && page.classList.contains('menu')) {
+				return;
+			}
+		}
+
+		dialog.close();
 	},
 
 	stopPropagation: function(e) {

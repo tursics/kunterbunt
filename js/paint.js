@@ -27,6 +27,14 @@ var paint = {
 		tool.canvas.doc.addEventListener('mouseup', paint.onUp);
 	},
 
+	reload: function() {
+		tool.canvas.dom.setAttribute('data', tool.files[tool.fileId].path);
+		tool.canvas.title.innerHTML = tool.files[tool.fileId].title;
+		tool.canvas.attribtion.innerHTML = tool.files[tool.fileId].license + ': ' + tool.files[tool.fileId].attribution;
+
+		undo.reset();
+	},
+
 	path: function(obj) {
 		undo.push(obj);
 

@@ -2,7 +2,7 @@ var tool = {
 	buttons: {
 		brush: null,
 		colorSwatch: [],
-		nextImage: null,
+		close: null,
 		palette: null,
 		positionNav: null,
 		redo: null,
@@ -33,4 +33,5 @@ var tool = {
 	},
 	navigation: '',
 	subTools: null,
+	tools: null,
 };
