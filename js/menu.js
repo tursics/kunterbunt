@@ -6,10 +6,13 @@ var menu = {
 	showMainMenu: function() {
 		var html = '';
 
+		html += '<h4>Wähle ein Bild zum ausmalen aus</h4>';
+
 		for (var f = 0; f < tool.files.length; ++f) {
 			var file = tool.files[f];
 
 			html += '<li onClick="menu.selectFile(' + f + ');">';
+			html += '<span class="img" style="background-image:url(' + file.path + ')"></span>';
 			html += '<span class="title">' + file.title + '</span>';
 			html += '</li>';
 		}

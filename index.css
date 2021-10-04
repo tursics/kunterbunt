@@ -279,11 +279,11 @@ div {
 	display: block;
 }
 
-.dialog .page.palette ul {
+.dialog .page.palette ul, .dialog .page.menu ul {
 	list-style-type: none;
 	padding-left: 1rem;
 }
-.dialog .page.palette li {
+.dialog .page.palette li, .dialog .page.menu li {
 	cursor: pointer;
 	display: inline-block;
 	line-height: 2rem;
@@ -291,6 +291,9 @@ div {
 	overflow: hidden;
 	position: relative;
 	width: 13rem;
+}
+.dialog .page.menu li {
+	width: 16rem;
 }
 .dialog .page.palette .emoji {
 	background: #ffffffc0;
@@ -306,7 +309,7 @@ div {
 .dialog .page.palette .img {
 	float: left;
 }
-.dialog .page.palette .title {
+.dialog .page.palette .title, .dialog .page.menu .title {
 	background: #ffffffc0;
 	border-radius: .3rem;
 	float: left;
@@ -315,8 +318,23 @@ div {
 	padding: 0 .5rem 0 .5rem;
 	white-space: nowrap;
 }
+.dialog .page.menu .title {
+	margin-left: .5rem;
+	max-width: 14rem;
+	overflow: hidden;
+}
 .dialog .page.palette svg {
 	border-radius: .5rem;
 	height: 3.5rem;
 	width: 13rem;
+}
+.dialog .page.menu .img {
+	background-color: #bcc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: .5rem;
+	float: left;
+	height: 5rem;
+	width: 16rem;
 }
