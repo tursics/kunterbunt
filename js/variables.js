@@ -4,6 +4,7 @@ var tool = {
 		colorSwatch: [],
 		close: null,
 		palette: null,
+		pen: null,
 		positionNav: null,
 		redo: null,
 		resetCanvasColors: null,

@@ -16,7 +16,10 @@ var buttons = {
 		tool.buttons.palette.addEventListener('click', colors.openPalette);
 
 		tool.buttons.brush = document.getElementById('brush');
-		tool.buttons.brush.addEventListener('click', buttons.toggleSubTools);
+		tool.buttons.brush.addEventListener('click', buttons.nothing);
+
+		tool.buttons.pen = document.getElementById('pen');
+		tool.buttons.pen.addEventListener('click', buttons.nothing);
 
 		tool.buttons.colorSwatch = document.getElementsByClassName('swatch');
 		for (var s = 0; s < tool.buttons.colorSwatch.length; ++s) {
@@ -34,8 +37,8 @@ var buttons = {
 		tool.buttons.redo.disabled = tool.history.redo.length === 0;
 	},
 
-	toggleSubTools: function() {
-		tool.subTools.classList.toggle('expanded');
+	nothing: function() {
+		console.log('-');
 	},
 
 	moveNavigation: function() {

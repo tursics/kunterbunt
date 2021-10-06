@@ -133,7 +133,7 @@ div {
 	display: none;
 }
 
-.tool button.circle {
+button.circle {
 	background: #fff;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -146,41 +146,44 @@ div {
 	margin: .5rem;
 	width: 3rem;
 }
-.tool button.circle:hover {
+button.circle:hover {
 	border-color: darksalmon;
 }
-.tool button.circle:disabled {
+button.circle:disabled {
 	cursor: default;
 	opacity: .25;
 }
-.tool button.iconBrush {
+button.circle.iconBrush {
 	background-image: url(assets/paint-brush-solid.svg);
 }
-.tool button.iconClose {
+button.circle.iconClose {
 	background-image: url(assets/times-solid.svg);
 }
-.tool button.iconPalette {
-	background-image: url(assets/palette-solid.svg);
+button.circle.iconPalette {
+	background-image: url(assets/plus-solid.svg);
 }
-.tool button.iconPosition {
+button.circle.iconPen {
+	background-image: url(assets/pen-fancy-solid.svg);
+}
+button.circle.iconPosition {
 	background-image: url(assets/sign-in-alt-solid.svg);
 }
-.tool button.iconRedo {
+button.circle.iconRedo {
 	background-image: url(assets/redo-solid.svg);
 }
-.tool button.iconUndo {
+button.circle.iconUndo {
 	background-image: url(assets/undo-solid.svg);
 }
-.toolTop .tool button.iconPosition {
+.toolTop button.circle.iconPosition {
 	transform: rotate(0deg);
 }
-.toolLeft .tool button.iconPosition {
+.toolLeft button.circle.iconPosition {
 	transform: rotate(270deg);
 }
-.toolRight .tool button.iconPosition {
+.toolRight button.circle.iconPosition {
 	transform: rotate(90deg);
 }
-.toolBottom .tool button.iconPosition {
+.toolBottom button.circle.iconPosition {
 	transform: rotate(180deg);
 }
 
