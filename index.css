@@ -338,3 +338,13 @@ div {
 	height: 5rem;
 	width: 16rem;
 }
+.dialog .page.menu .group {
+	border-bottom: .25rem solid #bcc;
+	cursor: auto;
+	display: block;
+	padding: 0 .5rem;
+	width: 15rem;
+}
+.dialog .page.menu h4 {
+	margin: 2rem 1.5rem 1rem 1.5rem;
+}
