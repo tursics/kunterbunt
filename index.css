@@ -160,24 +160,6 @@ div {
 	display: none;
 }
 
-.tool #resetColor, .tool #nextImage {
-	background: #fff;
-	border: 2px solid #000;
-	border-radius: 1rem;
-	height: 3rem;
-	width: 100%;
-}
-.toolTop .tool #resetColor, .toolTop .tool #nextImage,
-.toolBottom .tool #resetColor, .toolBottom .tool #nextImage {
-	width: 10%;
-}
-.tool #resetColor {
-	margin: 0 0 .5rem 0;
-}
-.tool #nextImage {
-	margin: 0 0 1rem 0;
-}
-
 .tool button.circle {
 	background: #fff;
 	background-position: center;
