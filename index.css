@@ -8,8 +8,7 @@ div {
 }
 
 .canvas {
-	border-radius: 1rem;
-	padding: 2rem .25rem;
+	padding: .25rem .25rem 2rem .25rem;
 	position: relative;
 	transition: height 500ms ease, width 500ms ease;
 }
@@ -19,41 +18,34 @@ div {
 	width: calc(100% - .5rem - 5px);
 }
 .toolTop .canvas {
-	height: calc(100% - 14rem);
+	height: calc(100% - 12.25rem);
 	position: sticky;
 	top: 5rem;
 	width: calc(100% - .5rem);
 }
 .toolLeft .canvas {
 	float: right;
-	height: calc(100% - 4rem);
+	height: calc(100% - 2.25rem);
 	margin-right: 5rem;
 	width: calc(100% - 11rem + .5rem);
 }
 .toolRight .canvas {
 	float: left;
-	height: calc(100% - 4rem);
+	height: calc(100% - 2.25rem);
 	margin-left: 5rem;
 	width: calc(100% - 11rem + .5rem);
 }
 .toolBottom .canvas {
 	float: left;
-	height: calc(100% - 14rem);
+	height: calc(100% - 12.25rem);
 	margin-top: 5rem;
 	width: calc(100% - .5rem);
 }
 
-#imageTitle {
-	border-radius: 1rem 1rem 0 0;
-	top: 0;
-}
 #imageAttribution {
-	border-radius: 0 0 1rem 1rem;
+	background: #444;
 	bottom: 0;
-}
-#imageTitle, #imageAttribution {
-	background: #bcc;
-	color: #000;
+	color: #888;
 	left: 0;
 	line-height: 1.75rem;
 	overflow: scroll;

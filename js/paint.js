@@ -3,7 +3,6 @@ var paint = {
 		tool.canvas.id = 'graphic';
 		tool.canvas.dom = document.getElementById(tool.canvas.id);
 		tool.canvas.attribtion = document.getElementById('imageAttribution');
-		tool.canvas.title = document.getElementById('imageTitle');
 
 		tool.canvas.dom.addEventListener('load', function() {
 			paint.initImage();
@@ -29,7 +28,6 @@ var paint = {
 
 	reload: function() {
 		tool.canvas.dom.setAttribute('data', tool.files[tool.fileId].path);
-		tool.canvas.title.innerHTML = tool.files[tool.fileId].title;
 		tool.canvas.attribtion.innerHTML = tool.files[tool.fileId].license + ': ' + tool.files[tool.fileId].attribution;
 
 		undo.reset();
