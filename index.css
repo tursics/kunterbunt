@@ -95,6 +95,35 @@ div {
 	left: 0;
 	right: 0;
 }
+.toolTop .tool .left, .toolBottom .tool .left {
+	float: left;
+}
+.toolTop .tool .middle, .toolBottom .tool .middle {
+	left: calc(50% - 4rem);
+	position: fixed;
+}
+.toolTop .tool .right, .toolBottom .tool .right {
+	float: right;
+}
+.toolLeft .tool .left, .toolRight .tool .left {
+	float: left;
+}
+.toolLeft .tool .middle, .toolRight .tool .middle {
+	left: .5rem;
+	position: fixed;
+	top: calc(50% - 4rem);
+	width: 4rem;
+}
+.toolLeft .tool .right, .toolRight .tool .right {
+	bottom: .5rem;
+	left: .5rem;
+	position: fixed;
+	width: 4rem;
+}
+.toolRight .tool .middle, .toolRight .tool .right {
+	left: initial;
+	right: .5rem;
+}
 
 .subtools {
 	background: #444;
