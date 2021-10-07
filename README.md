@@ -31,6 +31,7 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - läuft im Browser
 - optimiert für Computer
 - optimiert für Tablets
+- mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
 
 **noch offen**
 
