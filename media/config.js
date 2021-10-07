@@ -44,4 +44,14 @@ var mediaConfig = [
 		sourceFile: 'rba_d022237.jpg',
 		title: 'Stockente mit Rahmen (in weiß)',
 	},
+	{
+		attribution: '',
+		dating: 'ca. 220-355',
+		group: 'dionysos',
+		license: '',
+		material: 'Natursteine, Glas, Keramik',
+		path: 'media/flower.svg',
+		sourceFile: '',
+		title: 'Blume',
+	},
 ];
