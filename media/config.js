@@ -52,6 +52,6 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/flower.svg',
 		sourceFile: '',
-		title: 'Blume',
+		title: 'Blume (noch in Arbeit)',
 	},
 ];
