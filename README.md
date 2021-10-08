@@ -31,7 +31,7 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - &check; läuft im Browser
 - &check; optimiert für Computer
 - &check; mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
-- &check; Social Sharing erlauben, und wenn das der Browser nicht erlaubt...
+- &check; Social Sharing erlauben (2000 Pixel breit oder hoch), und wenn das der Browser nicht erlaubt...
 - &check; Bilder lokal speichern
 
 **offen**

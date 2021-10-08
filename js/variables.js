@@ -34,6 +34,9 @@ var tool = {
 		undo: [],
 	},
 	navigation: '',
+	share: {
+		imageSize: 2000,
+	},
 	subTools: null,
 	tools: null,
 };

@@ -73,10 +73,7 @@ var buttons = {
 	},
 
 	toSVGBlob: function(callback) {
-		var clone = tool.canvas.svg.cloneNode(true);
-		var outerHTML = clone.outerHTML;
-
-		callback(new Blob([outerHTML],{type: 'image/svg+xml;charset=utf-8'})); // aaaarg
+		callback(new Blob([tool.canvas.svg.outerHTML], {type: 'image/svg+xml;charset=utf-8'}));
 	},
 
 	toCanvas: function(callback) {
@@ -88,12 +85,19 @@ var buttons = {
 			image.onload = function() {
 				var bbox = tool.canvas.svg.getBBox();
 				var canvas = document.createElement('canvas');
+				var factorX = tool.share.imageSize / bbox.width;
+				var factorY = tool.share.imageSize / bbox.height;
+				var factor = factorX;
 
-				canvas.width = bbox.width;
-				canvas.height = bbox.height;
+				if ((bbox.width * factorY) <= tool.share.imageSize) {
+					factor = factorY;
+				}
+
+				canvas.width = bbox.width * factor;
+				canvas.height = bbox.height * factor;
 
 				var context = canvas.getContext('2d');
-				context.drawImage(image, 0, 0, bbox.width, bbox.height);
+				context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
 				callback(canvas);
 			};
