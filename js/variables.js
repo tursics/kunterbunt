@@ -3,12 +3,12 @@ var tool = {
 		brush: null,
 		colorSwatch: [],
 		close: null,
+		export: null,
 		palette: null,
 		pen: null,
 		positionNav: null,
 		redo: null,
 		resetCanvasColors: null,
-		share: null,
 		undo: null,
 	},
 	canvas: {
@@ -27,6 +27,9 @@ var tool = {
 		background: null,
 		pages: [],
 	},
+	export: {
+		imageSize: 2000,
+	},
 	fileId: 0,
 	files: [],
 	history: {
@@ -34,9 +37,6 @@ var tool = {
 		undo: [],
 	},
 	navigation: '',
-	share: {
-		imageSize: 2000,
-	},
 	subTools: null,
 	tools: null,
 };

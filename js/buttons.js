@@ -12,11 +12,11 @@ var buttons = {
 		tool.buttons.redo = document.getElementById('redo');
 		tool.buttons.redo.addEventListener('click', undo.redo);
 
-		tool.buttons.share = document.getElementById('share');
-	  	tool.buttons.share.addEventListener('click', buttons.share);
+		tool.buttons.export = document.getElementById('export');
+	  	tool.buttons.export.addEventListener('click', buttons.export);
 		if (!navigator.canShare || !navigator.canShare()) {
-			tool.buttons.share.classList.remove('iconShare');
-			tool.buttons.share.classList.add('iconDownload');
+			tool.buttons.export.classList.remove('iconShare');
+			tool.buttons.export.classList.add('iconDownload');
 		}
 
 		tool.buttons.palette = document.getElementById('palette');
@@ -85,11 +85,11 @@ var buttons = {
 			image.onload = function() {
 				var bbox = tool.canvas.svg.getBBox();
 				var canvas = document.createElement('canvas');
-				var factorX = tool.share.imageSize / bbox.width;
-				var factorY = tool.share.imageSize / bbox.height;
+				var factorX = tool.export.imageSize / bbox.width;
+				var factorY = tool.export.imageSize / bbox.height;
 				var factor = factorX;
 
-				if ((bbox.width * factorY) <= tool.share.imageSize) {
+				if ((bbox.width * factorY) <= tool.export.imageSize) {
 					factor = factorY;
 				}
 
@@ -134,7 +134,7 @@ var buttons = {
 		link.remove();
 	},
 
-	share: function() {
+	export: function() {
 		if (navigator.canShare && navigator.canShare()) {
 			buttons.toPNGBlob(function (blob) {
 				navigator.share({blob: blob, mimeType: 'image/png'});
