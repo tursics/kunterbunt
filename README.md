@@ -21,29 +21,29 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 
 **erledigt**
 
-- SVG-Ausmal-Editor
-- Farbe auswählen und losmalen
-- Stift malt eine Fläche mit einer Farbe aus
-- Undo und Redo
-- mehrere Bild-Vorlagen können ausgewählt werden
-- Bilder in 2 Variante (bunt und weiß)
-- Funktionsleisten können an allen 4 Rändern angeordnet werden
-- läuft im Browser
-- optimiert für Computer
-- optimiert für Tablets
-- mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
+- &check; SVG-Ausmal-Editor
+- &check; Farbe auswählen und losmalen
+- &check; Stift malt eine Fläche mit einer Farbe aus
+- &check; Undo und Redo
+- &check; mehrere Bild-Vorlagen können ausgewählt werden
+- &check; Bilder in 2 Variante (bunt und weiß)
+- &check; Funktionsleisten können an allen 4 Rändern angeordnet werden
+- &check; läuft im Browser
+- &check; optimiert für Computer
+- &check; mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
+- &check; Social Sharing erlauben, und wenn das der Browser nicht erlaubt...
+- &check; Bilder lokal speichern
 
-**noch offen**
+**offen**
 
-- Helligkeit von Farben ändern können
-- Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
-- für Telefone optimieren
-- eventuell für Deckenbeamer optimieren
-- Bilder lokal speichern
-- Bilder als Foto abspeichern
-- Bilder als Video abspeichern
-- Social Sharing erlauben
-- Multi-Touch erlauben
+- &cross; optimiert für Tablets
+- &cross; optimiert für Telefone
+- &cross; optimiert für Drucker
+- &cross; eventuell für Deckenbeamer optimieren
+- &cross; Multi-Touch erlauben
+- &cross; Helligkeit von Farben ändern können
+- &cross; Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
+- &cross; Bilder als Video abspeichern / teilen
 
 ## Bilder vorbereiten
 
@@ -56,7 +56,7 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - eine typische Farbe aus dem Kästchen auswählen
 - nächstes Kästchen malen
 
-Für jedes Kästchen als:
+Für jedes Kästchen also:
 
 - Taste B drücken
 - 5 Mausklicks
@@ -72,5 +72,4 @@ Zum Abschluß
 ## Software-Ideen
 
 - [Paint by number generator](https://drake7707.github.io/paintbynumbersgenerator/index.html)
-- [color by number](https://jsfiddle.net/shockey8oz/v54dqtgd/)
 - [Color by number pixel art](https://codepen.io/mathhulk/pen/VwaXOXR)

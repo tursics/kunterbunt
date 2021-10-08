@@ -12,6 +12,13 @@ var buttons = {
 		tool.buttons.redo = document.getElementById('redo');
 		tool.buttons.redo.addEventListener('click', undo.redo);
 
+		tool.buttons.share = document.getElementById('share');
+	  	tool.buttons.share.addEventListener('click', buttons.share);
+		if (!navigator.canShare || !navigator.canShare()) {
+			tool.buttons.share.classList.remove('iconShare');
+			tool.buttons.share.classList.add('iconDownload');
+		}
+
 		tool.buttons.palette = document.getElementById('palette');
 		tool.buttons.palette.addEventListener('click', colors.openPalette);
 
@@ -64,4 +71,75 @@ var buttons = {
 			tool.navigation = 'left';
 		}
 	},
+
+	toSVGBlob: function(callback) {
+		var clone = tool.canvas.svg.cloneNode(true);
+		var outerHTML = clone.outerHTML;
+
+		callback(new Blob([outerHTML],{type: 'image/svg+xml;charset=utf-8'})); // aaaarg
+	},
+
+	toCanvas: function(callback) {
+		buttons.toSVGBlob(function (blob) {
+			var URL = window.URL || window.webkitURL || window;
+			var blobURL = URL.createObjectURL(blob);
+
+			var image = new Image();
+			image.onload = function() {
+				var bbox = tool.canvas.svg.getBBox();
+				var canvas = document.createElement('canvas');
+
+				canvas.width = bbox.width;
+				canvas.height = bbox.height;
+
+				var context = canvas.getContext('2d');
+				context.drawImage(image, 0, 0, bbox.width, bbox.height);
+
+				callback(canvas);
+			};
+
+			image.src = blobURL;
+		});
+	},
+
+	toPNGImage: function(callback) {
+		buttons.toCanvas(function (canvas) {
+			callback(canvas.toDataURL());
+//			callback(canvas.toDataURL('image/jpg'));
+//			callback(canvas.toDataURL('image/webp'));
+		});
+	},
+
+	toPNGBlob: function(callback) {
+		buttons.toCanvas(function (canvas) {
+			canvas.toBlob(function (blob) {
+				callback(blob);
+			}, 'image/png');
+		});
+	},
+
+	download: function(href, name) {
+		var link = document.createElement('a');
+
+		link.download = name;
+		link.style.opacity = '0';
+		document.body.append(link);
+
+		link.href = href;
+		link.click();
+		link.remove();
+	},
+
+	share: function() {
+		if (navigator.canShare && navigator.canShare()) {
+			buttons.toPNGBlob(function (blob) {
+				navigator.share({blob: blob, mimeType: 'image/png'});
+			});
+		} else {
+			buttons.toPNGImage(function (img) {
+				buttons.download(img, tool.canvas.title + '.png');
+			});
+		}
+	},
+
 };

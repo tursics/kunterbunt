@@ -188,6 +188,9 @@ button.circle.iconBrush {
 button.circle.iconClose {
 	background-image: url(assets/times-solid.svg);
 }
+button.circle.iconDownload {
+	background-image: url(assets/download-solid.svg);
+}
 button.circle.iconPalette {
 	background-image: url(assets/plus-solid.svg);
 }
@@ -199,6 +202,9 @@ button.circle.iconPosition {
 }
 button.circle.iconRedo {
 	background-image: url(assets/redo-solid.svg);
+}
+button.circle.iconShare {
+	background-image: url(assets/share-alt-solid.svg);
 }
 button.circle.iconUndo {
 	background-image: url(assets/undo-solid.svg);

@@ -8,6 +8,7 @@ var tool = {
 		positionNav: null,
 		redo: null,
 		resetCanvasColors: null,
+		share: null,
 		undo: null,
 	},
 	canvas: {
