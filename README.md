@@ -36,6 +36,7 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 
 **offen**
 
+- &cross; Social Sharing direkt aufrufen
 - &cross; optimiert für Tablets
 - &cross; optimiert für Telefone
 - &cross; optimiert für Drucker
