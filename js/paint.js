@@ -16,19 +16,25 @@ var paint = {
 
 		var pathes = tool.canvas.doc.querySelectorAll('path');
 		for (p = 0; p < pathes.length; ++p) {
-			pathes[p].addEventListener('mousedown', paint.onDown);
-			pathes[p].addEventListener('mousemove', paint.onMove);
-			pathes[p].addEventListener('mouseup', paint.onUp);
+			pathes[p].addEventListener('mousedown', paint.onMouseDown, false);
+			pathes[p].addEventListener('mousemove', paint.onMouseMove, false);
+			pathes[p].addEventListener('mouseup', paint.onUp, false);
 		}
 
-		tool.canvas.doc.addEventListener('mousedown', paint.onDown);
-		tool.canvas.doc.addEventListener('mousemove', paint.onMove);
-		tool.canvas.doc.addEventListener('mouseup', paint.onUp);
+		tool.canvas.doc.addEventListener('mousedown', paint.onMouseDown, false);
+		tool.canvas.doc.addEventListener('mousemove', paint.onMouseMove, false);
+		tool.canvas.doc.addEventListener('mouseup', paint.onUp, false);
+
+		tool.canvas.doc.addEventListener('touchstart', paint.onTouchDown, false);
+		tool.canvas.doc.addEventListener('touchmove', paint.onTouchMove, false);
+		tool.canvas.doc.addEventListener('touchcancel', paint.onUp, false);
+		tool.canvas.doc.addEventListener('touchend', paint.onUp, false);
 	},
 
 	reload: function() {
 		tool.canvas.dom.setAttribute('data', tool.files[tool.fileId].path);
 		tool.canvas.attribtion.innerHTML = tool.files[tool.fileId].license + ': ' + tool.files[tool.fileId].attribution;
+		tool.canvas.title = tool.files[tool.fileId].title;
 
 		undo.reset();
 	},
@@ -40,22 +46,80 @@ var paint = {
 		obj.setAttribute('style', props);
 	},
 
-	onDown: function(e) {
+	onMouseDown: function(e) {
 		if (e.which !== 1) {
 			return;
 		}
 
-		tool.canvas.mouseDown = true;
-		if ((tool.canvas.mouseMove !== e.target) && (e.target !== tool.canvas.svg)) {
-			tool.canvas.mouseMove = e.target;
-			paint.path(e.target);
+		paint.onDown(e.target);
+	},
+
+	onTouchDown: function(ev) {
+		for (var t = 0; t < ev.targetTouches.length; ++t) {
+			paint.onDown(ev.targetTouches[t].target);
 		}
 	},
 
-	onMove: function(e) {
-		if (tool.canvas.mouseDown && (tool.canvas.mouseMove !== e.target) && (e.target !== tool.canvas.svg)) {
-			tool.canvas.mouseMove = e.target;
-			paint.path(e.target);
+	onDown: function(target) {
+		tool.canvas.mouseDown = true;
+		if ((tool.canvas.mouseMove !== target) && (target !== tool.canvas.svg)) {
+			tool.canvas.mouseMove = target;
+			paint.path(target);
+		}
+	},
+
+	pathFromPoint: function(event, id) {
+		var clientX = event.targetTouches[id].clientX;
+		var clientY = event.targetTouches[id].clientY;
+		var x, y;
+
+		if (event.target === tool.canvas.svg) {
+			// to do
+			return tool.canvas.svg;
+			var ctm = tool.canvas.svg.getScreenCTM().inverse();
+
+			var pt = tool.canvas.svg.createSVGPoint();
+			pt.x = clientX;
+			pt.y = clientY;
+			var cursorPt = pt.matrixTransform(ctm);
+			x = Math.floor(cursorPt.x);
+			y = Math.floor(cursorPt.y);
+
+//			x = clientX;
+//			y = clientY;
+		} else {
+			var ctm = event.target.getScreenCTM();
+
+			x = (clientX - ctm.e) / ctm.a;
+			y = (clientY - ctm.f) / ctm.d;
+		}
+
+		var paths = tool.canvas.svg.getElementsByTagName('path');
+		for (var p = 0; p < paths.length; ++p) {
+			var path = paths[p];
+			var rect = path.getBBox();
+			if ((rect.x <= x) && (x <= (rect.x + rect.width)) && (rect.y <= y) && (y <= (rect.y + rect.height))) {
+				return path;
+			}
+		}
+
+		return tool.canvas.svg;
+	},
+
+	onMouseMove: function(e) {
+		paint.onMove(e.target);
+	},
+
+	onTouchMove: function(ev) {
+		for (var t = 0; t < ev.targetTouches.length; ++t) {
+			paint.onMove(paint.pathFromPoint(ev, t));
+		}
+	},
+
+	onMove: function(target) {
+		if (tool.canvas.mouseDown && (tool.canvas.mouseMove !== target) && (target !== tool.canvas.svg)) {
+			tool.canvas.mouseMove = target;
+			paint.path(target);
 		}
 	},
 
