@@ -12,7 +12,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/duck.svg',
 		sourceFile: 'rba_d022237.jpg',
-		title: 'Stockente',
+		title: '🦆 Stockente',
 	},
 	{
 		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
@@ -22,7 +22,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/duck-empty.svg',
 		sourceFile: 'rba_d022237.jpg',
-		title: 'Stockente (in weiß)',
+		title: '🦆 Stockente (in weiß)',
 	},
 	{
 		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
@@ -32,7 +32,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/duck-frame.svg',
 		sourceFile: 'rba_d022237.jpg',
-		title: 'Stockente mit Rahmen',
+		title: '🦆 Stockente mit Rahmen',
 	},
 	{
 		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
@@ -42,7 +42,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/duck-frame-empty.svg',
 		sourceFile: 'rba_d022237.jpg',
-		title: 'Stockente mit Rahmen (in weiß)',
+		title: '🦆 Stockente mit Rahmen (in weiß)',
 	},
 	{
 		attribution: '',
@@ -52,6 +52,27 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/flower.svg',
 		sourceFile: '',
-		title: 'Blume (noch in Arbeit)',
+		title: '🌼 Blume (noch in Arbeit)',
+	},
+	{
+		group: 'root',
+		groupId: 'kidsdigilab',
+		title: 'kids.digilab.berlin',
+	},
+	{
+		attribution: 'Deutsches Technikmuseum',
+		group: 'kidsdigilab',
+		license: 'OER / CC BY SA 4.0',
+		path: 'media/raster-8x8-smiley.svg',
+		sourceFile: 'raster-8x8-smiley.png',
+		title: '😃 Smiley',
+	},
+	{
+		attribution: 'Deutsches Technikmuseum',
+		group: 'kidsdigilab',
+		license: 'OER / CC BY SA 4.0',
+		path: 'media/raster-12x12-pinguin.svg',
+		sourceFile: 'raster-12x12-pinguin.png',
+		title: '🐧 Pinguin',
 	},
 ];

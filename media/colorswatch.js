@@ -34,4 +34,9 @@ var mediaColorSwatch = [
 		emoji: '🪁',
 		title: 'Drache',
 	},
+	{
+		colors: ['#961e96','#bd1c1f','#e45885','#ee8309','#b4a836','#4184c2','#ffffff'],
+		emoji: '👾',
+		title: 'Codie',
+	},
 ];
