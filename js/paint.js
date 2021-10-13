@@ -55,8 +55,8 @@ var paint = {
 	},
 
 	onTouchDown: function(ev) {
-		for (var t = 0; t < ev.targetTouches.length; ++t) {
-			paint.onDown(ev.targetTouches[t].target);
+		for (var t = 0; t < ev.touches.length; ++t) {
+			paint.onDown(ev.touches[t].target);
 		}
 	},
 
@@ -69,8 +69,8 @@ var paint = {
 	},
 
 	pathFromPoint: function(event, id) {
-		var clientX = event.targetTouches[id].clientX;
-		var clientY = event.targetTouches[id].clientY;
+		var clientX = event.touches[id].clientX;
+		var clientY = event.touches[id].clientY;
 		var x, y;
 
 		if (event.target === tool.canvas.svg) {
@@ -111,7 +111,7 @@ var paint = {
 	},
 
 	onTouchMove: function(ev) {
-		for (var t = 0; t < ev.targetTouches.length; ++t) {
+		for (var t = 0; t < ev.touches.length; ++t) {
 			paint.onMove(paint.pathFromPoint(ev, t));
 		}
 	},
