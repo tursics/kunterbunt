@@ -14,7 +14,7 @@ var buttons = {
 
 		tool.buttons.export = document.getElementById('export');
 	  	tool.buttons.export.addEventListener('click', fileexport.export);
-		if (fileexport.canShare()) {
+		if (!fileexport.canShare()) {
 			tool.buttons.export.classList.remove('iconShare');
 			tool.buttons.export.classList.add('iconDownload');
 		}
