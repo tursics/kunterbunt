@@ -31,17 +31,16 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - &check; läuft im Browser
 - &check; optimiert für Computer
 - &check; mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
-- &check; Social Sharing erlauben (2000 Pixel breit oder hoch), und wenn das der Browser nicht erlaubt...
-- &check; Bilder lokal speichern
+- &check; Social Sharing (2000 Pixel breit oder hoch) für mobile Geräte (JPG-Datei)
+- &check; Social Sharing wird im Desktop-Browser zum Download-Button (PNG-Datei)
 
 **offen**
 
-- &cross; Social Sharing direkt aufrufen
+- &cross; Multi-Touch erlauben
 - &cross; optimiert für Tablets
 - &cross; optimiert für Telefone
 - &cross; optimiert für Drucker
 - &cross; eventuell für Deckenbeamer optimieren
-- &cross; Multi-Touch erlauben
 - &cross; Helligkeit von Farben ändern können
 - &cross; Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
 - &cross; Bilder als Video abspeichern / teilen
