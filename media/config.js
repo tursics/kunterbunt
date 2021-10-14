@@ -52,7 +52,17 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/flower.svg',
 		sourceFile: '',
-		title: '🌼 Blume (noch in Arbeit)',
+		title: '🌼 Blume',
+	},
+	{
+		attribution: '',
+		dating: 'ca. 220-355',
+		group: 'dionysos',
+		license: '',
+		material: 'Natursteine, Glas, Keramik',
+		path: 'media/flower-empty.svg',
+		sourceFile: '',
+		title: '🌼 Blume (in weiß)',
 	},
 	{
 		group: 'root',
