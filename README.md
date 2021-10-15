@@ -50,6 +50,7 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - &cross; Bilder als Video abspeichern / teilen
 - &cross; SVGs von der Festplatte / URL importieren
 - &cross; Hauptfunktion als Library in npm auslagern
+- &cross; benutze Facebook um Bilder auf mehreren Geräten zu synchronisieren
 
 ## Bilder vorbereiten
 
