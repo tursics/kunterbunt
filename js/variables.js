@@ -37,6 +37,9 @@ var tool = {
 		undo: [],
 	},
 	navigation: '',
+	storage: {
+		keyImage: 'lastImage',
+	},
 	subTools: null,
 	tools: null,
 };

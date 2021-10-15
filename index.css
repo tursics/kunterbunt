@@ -324,15 +324,21 @@ button.circle.iconUndo {
 	height: 3.5rem;
 	width: 13rem;
 }
-.dialog .page.menu .img {
+.dialog .page.menu .img, .dialog .page.menu .inline-img {
 	background-color: #bcc;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
 	border-radius: .5rem;
 	float: left;
 	height: 5rem;
 	width: 16rem;
+}
+.dialog .page.menu .img {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.dialog .page.menu .inline-img svg {
+	height: 100%;
+	width: 100%;
 }
 .dialog .page.menu .group {
 	border-bottom: .25rem solid #bcc;

@@ -32,9 +32,16 @@ var paint = {
 	},
 
 	reload: function() {
-		tool.canvas.dom.setAttribute('data', tool.files[tool.fileId].path);
-		tool.canvas.attribtion.innerHTML = tool.files[tool.fileId].license + ': ' + tool.files[tool.fileId].attribution;
-		tool.canvas.title = tool.files[tool.fileId].title;
+		if (tool.fileId) {
+			tool.canvas.dom.setAttribute('data', tool.files[tool.fileId].path);
+			tool.canvas.attribtion.innerHTML = tool.files[tool.fileId].license + ': ' + tool.files[tool.fileId].attribution;
+			tool.canvas.title = tool.files[tool.fileId].title;
+		} else {
+			var storedImage = menu.restoreImage();
+			tool.canvas.dom.setAttribute('data', '');
+			tool.canvas.attribtion.innerHTML = storedImage.attribution;
+			tool.canvas.title = storedImage.title;
+		}
 
 		undo.reset();
 	},
@@ -126,6 +133,8 @@ var paint = {
 	onUp: function() {
 		tool.canvas.mouseDown = false;
 		tool.canvas.mouseMove = null;
+
+		menu.storeImage();
 	},
 
 };

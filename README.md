@@ -25,31 +25,31 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - &check; Farbe auswählen und losmalen
 - &check; Stift malt eine Fläche mit einer Farbe aus
 - &check; Undo und Redo
+- &check; Multi-Touch erlauben
 - &check; mehrere Bild-Vorlagen können ausgewählt werden
 - &check; Bilder in 2 Variante (bunt und weiß)
 - &check; Funktionsleisten können an allen 4 Rändern angeordnet werden
 - &check; läuft im Browser
 - &check; optimiert für Computer
+- &check; Stift-Bedienung auf Touch-Bildschirmen
 - &check; mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
 - &check; Social Sharing (2000 Pixel breit oder hoch) für mobile Geräte (JPG-Datei)
 - &check; Social Sharing wird im Desktop-Browser zum Download-Button (PNG-Datei)
-- &check; Multi-Touch erlauben
-- &check; Stift-Bedienung auf Touch-Bildschirmen
 
 **offen**
 
+- &cross; angefangene Bilder speichern und wieder auswählbar machen
 - &cross; optimiert für Tablets
 - &cross; optimiert für Telefone
 - &cross; optimiert für Drucker
 - &cross; eventuell für Deckenbeamer optimieren
 - &cross; Helligkeit von Farben ändern können
 - &cross; Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
-- &cross; Bilder als Video abspeichern / teilen
-- &cross; Hauptfunktion als Library in npm auslagern
 - &cross; mehr Farbpaletten hinzufügen
 - &cross; mehr Bildvorlagen hinzufügen
+- &cross; Bilder als Video abspeichern / teilen
 - &cross; SVGs von der Festplatte / URL importieren
-- &cross; angefangene Bilder speichern und wieder auswählbar machen
+- &cross; Hauptfunktion als Library in npm auslagern
 
 ## Bilder vorbereiten
 
