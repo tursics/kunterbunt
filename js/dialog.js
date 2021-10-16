@@ -17,7 +17,9 @@ var dialog = {
 	show: function(name) {
 		tool.dialog.background.classList.remove('hidden');
 
-		document.querySelector('.dialog .' + name).classList.add('show');
+		var element = document.querySelector('.dialog .' + name);
+		element.classList.add('show');
+		element.scrollTo(0, 0);
 	},
 
 	close: function() {
