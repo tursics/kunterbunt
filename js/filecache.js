@@ -20,11 +20,14 @@ var filecache = {
 	},
 
 	push: function(attribution, svg, title) {
-		var size = 1;
-		var id = 0;
-
+		var size = Math.min(filecache.size() + 1, tool.filecache.max);
 		localStorage.setItem(tool.filecache.keySize, size);
-		localStorage.setItem(tool.filecache.keyPrefix + id, JSON.stringify({
+
+		for (var id = size - 1; id > 0; --id) {
+			localStorage.setItem(tool.filecache.keyPrefix + id, localStorage.getItem(tool.filecache.keyPrefix + (id - 1)));
+		}
+
+		localStorage.setItem(tool.filecache.keyPrefix + 0, JSON.stringify({
 			attribution: attribution,
 			svg: svg,
 			title: title,

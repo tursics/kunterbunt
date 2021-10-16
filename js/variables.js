@@ -31,9 +31,9 @@ var tool = {
 		imageSize: 2000,
 	},
 	filecache: {
-		keyImage: 'lastImage',
-		keySize: 'cacheSize',
 		keyPrefix: 'image',
+		keySize: 'cacheSize',
+		max: 5,
 	},
 	fileId: 0,
 	files: [],

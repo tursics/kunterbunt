@@ -9,15 +9,18 @@ var menu = {
 
 		if (cacheSize > 0) {
 			var id = 0;
-			var storedImage = filecache.get(id);
-			var title = 'Eigene Bilder';
+			var title = 'Letzte Kunstwerke';
 			html += '<li class="group">' + title + '</li>';
 
-			var f = "'cache-" + id + "'";
-			html += '<li onClick="menu.selectFile(' + f + ');">';
-			html += '<span class="inline-img">' + storedImage.svg + '</span>';
-			html += '<span class="title">' + storedImage.title + '</span>';
-			html += '</li>';
+			for (var c = 0; c < cacheSize; ++c) {
+				var file = filecache.get(c);
+
+				var f = "'cache-" + id + "'";
+				html += '<li onClick="menu.selectFile(' + f + ');">';
+				html += '<span class="inline-img">' + file.svg + '</span>';
+				html += '<span class="title">' + file.title + '</span>';
+				html += '</li>';
+			}
 		}
 
 		for (var f = 0; f < tool.files.length; ++f) {
