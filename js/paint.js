@@ -29,6 +29,8 @@ var paint = {
 		tool.canvas.doc.addEventListener('touchmove', paint.onTouchMove, false);
 		tool.canvas.doc.addEventListener('touchcancel', paint.onUp, false);
 		tool.canvas.doc.addEventListener('touchend', paint.onUp, false);
+
+		filecache.saveCanvas();
 	},
 
 	reload: function() {
@@ -36,9 +38,13 @@ var paint = {
 			tool.canvas.dom.setAttribute('data', tool.files[tool.fileId].path);
 			tool.canvas.attribtion.innerHTML = tool.files[tool.fileId].license + ': ' + tool.files[tool.fileId].attribution;
 			tool.canvas.title = tool.files[tool.fileId].title;
+
+			filecache.push(tool.canvas.attribtion.innerHTML, null, tool.canvas.title);
 		} else {
-			var storedImage = menu.restoreImage();
-			tool.canvas.dom.setAttribute('data', '');
+			var storedImage = filecache.get(0);
+			console.log(storedImage);
+//			tool.canvas.doc.innerHTML = storedImage.svg;
+			tool.canvas.svg.outerHTML = storedImage.svg;
 			tool.canvas.attribtion.innerHTML = storedImage.attribution;
 			tool.canvas.title = storedImage.title;
 		}
@@ -134,7 +140,7 @@ var paint = {
 		tool.canvas.mouseDown = false;
 		tool.canvas.mouseMove = null;
 
-		menu.storeImage();
+		filecache.saveCanvas();
 	},
 
 };

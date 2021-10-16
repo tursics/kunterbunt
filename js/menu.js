@@ -5,13 +5,15 @@ var menu = {
 
 	showMainMenu: function() {
 		var html = '';
-		var storedImage = menu.restoreImage();
+		var cacheSize = filecache.size();
 
-		if (storedImage) {
+		if (cacheSize > 0) {
+			var id = 0;
+			var storedImage = filecache.get(id);
 			var title = 'Eigene Bilder';
 			html += '<li class="group">' + title + '</li>';
 
-			var f = "'storage'";
+			var f = "'cache-" + id + "'";
 			html += '<li onClick="menu.selectFile(' + f + ');">';
 			html += '<span class="inline-img">' + storedImage.svg + '</span>';
 			html += '<span class="title">' + storedImage.title + '</span>';
@@ -39,9 +41,15 @@ var menu = {
 	},
 
 	selectFile: function(id) {
-		if (id === 'storage') {
-			tool.fileId = null;
-			return;
+		if (typeof id === 'string') {
+			var parts = id.split('-');
+			if ((parts.length === 2) && (parts[0] === 'cache')) {
+				tool.fileId = null;
+				console.log(parts[1]);
+				return;
+			} else {
+				return;
+			}
 		} else {
 			tool.fileId = Math.abs(id);
 			if (tool.fileId >= tool.files.length) {
@@ -65,19 +73,7 @@ var menu = {
 		tool.tools.classList.add('hidden');
 		tool.subTools.classList.add('hidden');
 
-		menu.storeImage();
+		filecache.saveCanvas();
 		menu.showMainMenu();
-	},
-
-	restoreImage: function() {
-		return JSON.parse(localStorage.getItem(tool.storage.keyImage));
-	},
-
-	storeImage: function() {
-		localStorage.setItem(tool.storage.keyImage, JSON.stringify({
-			attribution: tool.canvas.attribtion.innerHTML,
-			svg: tool.canvas.svg.outerHTML,
-			title: tool.canvas.title,
-		}));
 	},
 };

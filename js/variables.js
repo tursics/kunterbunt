@@ -30,6 +30,11 @@ var tool = {
 	export: {
 		imageSize: 2000,
 	},
+	filecache: {
+		keyImage: 'lastImage',
+		keySize: 'cacheSize',
+		keyPrefix: 'image',
+	},
 	fileId: 0,
 	files: [],
 	history: {
@@ -37,9 +42,6 @@ var tool = {
 		undo: [],
 	},
 	navigation: '',
-	storage: {
-		keyImage: 'lastImage',
-	},
 	subTools: null,
 	tools: null,
 };
