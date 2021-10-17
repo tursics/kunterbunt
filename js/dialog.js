@@ -15,15 +15,20 @@ var dialog = {
 	},
 
 	show: function(name) {
+		var element = document.querySelector('.dialog .' + name);
+
+		if (element.classList.contains('floating')) {
+			tool.dialog.background.classList.add('transparent-background');
+		}
 		tool.dialog.background.classList.remove('hidden');
 
-		var element = document.querySelector('.dialog .' + name);
 		element.classList.add('show');
 		element.scrollTo(0, 0);
 	},
 
 	close: function() {
 		tool.dialog.background.classList.add('hidden');
+		tool.dialog.background.classList.remove('transparent-background');
 
 		for (var p = 0; p < tool.dialog.pages.length; ++p) {
 			var page = tool.dialog.pages[p];

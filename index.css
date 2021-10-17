@@ -203,6 +203,10 @@ button.circle.iconUndo {
 	z-index: 20;
 }
 
+.dialog.transparent-background {
+	background: #00000001;
+}
+
 .dialog .page {
 	background: #fff;
 	bottom: 25%;
