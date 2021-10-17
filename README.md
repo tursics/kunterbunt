@@ -38,7 +38,7 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 
 **offen**
 
-- &cross; angefangene Bilder speichern und wieder auswählbar machen
+- &cross; die letzten 5 angefangenen Bilder speichern und wieder auswählbar machen
 - &cross; optimiert für Tablets
 - &cross; optimiert für Telefone
 - &cross; optimiert für Drucker

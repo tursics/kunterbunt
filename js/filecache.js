@@ -34,6 +34,20 @@ var filecache = {
 		}));
 	},
 
+	moveToFront: function(objId) {
+		if (objId < filecache.size()) {
+			var obj = localStorage.getItem(tool.filecache.keyPrefix + (objId));
+
+			for (var id = objId; id > 0; --id) {
+				localStorage.setItem(tool.filecache.keyPrefix + id, localStorage.getItem(tool.filecache.keyPrefix + (id - 1)));
+			}
+
+			localStorage.setItem(tool.filecache.keyPrefix + 0, obj);
+		} else {
+			console.error('Wrong file cache index:', objId);
+		}
+	},
+
 	size: function() {
 		var size = localStorage.getItem(tool.filecache.keySize);
 		return size ? size : 0;

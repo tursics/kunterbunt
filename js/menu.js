@@ -8,14 +8,13 @@ var menu = {
 		var cacheSize = filecache.size();
 
 		if (cacheSize > 0) {
-			var id = 0;
 			var title = 'Letzte Kunstwerke';
 			html += '<li class="group">' + title + '</li>';
 
 			for (var c = 0; c < cacheSize; ++c) {
 				var file = filecache.get(c);
 
-				var f = "'cache-" + id + "'";
+				var f = "'cache-" + c + "'";
 				html += '<li onClick="menu.selectFile(' + f + ');">';
 				html += '<span class="inline-img">' + file.svg + '</span>';
 				html += '<span class="title">' + file.title + '</span>';
@@ -47,8 +46,12 @@ var menu = {
 		if (typeof id === 'string') {
 			var parts = id.split('-');
 			if ((parts.length === 2) && (parts[0] === 'cache')) {
+				var pos = parseInt(parts[1], 10);
 				tool.fileId = null;
-				console.log(parts[1]);
+
+				// remove me
+				filecache.moveToFront(pos);
+				menu.showMainMenu();
 				return;
 			} else {
 				return;
