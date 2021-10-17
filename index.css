@@ -263,21 +263,38 @@ button.circle.iconUndo {
 	right: 25%;
 	top: 25%;
 }
-@media only screen and (max-width: 30rem) {
-	.dialog .page {
-		bottom: 4rem;
-		left: .5rem;
-		right: .5rem;
-		top: 4rem;
-	}
-}
 .dialog .page.show {
 	display: block;
+}
+.dialog .page.palette {
+	left: calc(50vw - 21.5rem);
+	overflow-x: hidden;
+	right: initial;
+	width: 43rem;
+}
+@media only screen and (max-width: 45rem) {
+	.dialog .page.palette {
+		left: calc(50vw - 14.5rem);
+		width: 29rem;
+	}
+}
+@media only screen and (max-width: 31rem) {
+	.dialog .page.palette {
+		bottom: 4rem;
+		left: calc(50vw - 7.5rem);
+		top: 4rem;
+		width: 15rem;
+	}
+}
+@media only screen and (max-width: 15rem) {
+	.dialog .page.palette {
+		left: 0;
+	}
 }
 
 .dialog .page.palette ul, .dialog .page.menu ul {
 	list-style-type: none;
-	padding-left: 1rem;
+	padding: 0 .5rem;
 }
 .dialog .page.palette li, .dialog .page.menu li {
 	cursor: pointer;
