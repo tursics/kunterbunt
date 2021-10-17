@@ -91,6 +91,8 @@ var fileexport = {
 		var filenamePNG = tool.canvas.title + '.png';
 		var filenameJPG = tool.canvas.title + '.jpg';
 
+		dialog.close();
+
 		if (fileexport.canShare()) {
 			fileexport.toJPGBlob(function (blob) {
 				const fileArray = [new File([blob], filenameJPG, {type: blob.type})];

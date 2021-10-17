@@ -19,6 +19,12 @@ var buttons = {
 			tool.buttons.export.classList.add('iconDownload');
 		}
 
+		tool.buttons.options = document.getElementById('options');
+		tool.buttons.options.addEventListener('click', menu.showOptionsMenu);
+
+		tool.buttons.optionsClose = document.getElementById('optionsClose');
+		tool.buttons.optionsClose.addEventListener('click', dialog.close);
+
 		tool.buttons.palette = document.getElementById('palette');
 		tool.buttons.palette.addEventListener('click', colors.openPalette);
 

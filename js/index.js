@@ -9,13 +9,12 @@ window.addEventListener('load', function() {
 	tool.files = mediaConfig;
 
 	preventScrolling();
-	paint.init();
 
+	paint.init();
+	dialog.init();
+	menu.init();
 	buttons.init();
 	buttons.update();
 
-	dialog.init();
-
-	menu.init();
 	menu.showMainMenu();
 });

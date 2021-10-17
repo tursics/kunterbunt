@@ -1,9 +1,12 @@
 var menu = {
 	init: function() {
 		dialog.push(document.querySelector('.dialog .menu'));
+		dialog.push(document.querySelector('.dialog .options'));
+
+		menu.initOptionsMenu();
 	},
 
-	showMainMenu: function() {
+	initMainMenu: function() {
 		var html = '';
 		var cacheSize = filecache.size();
 
@@ -39,7 +42,29 @@ var menu = {
 		html = '<h4>Wähle ein Bild zum ausmalen aus</h4>' + html;
 
 		dialog.setContent('menu', html);
+	},
+
+	initOptionsMenu: function() {
+		var html = '';
+
+		html += '<button id="undo" class="circle iconUndo"></button>';
+		html += '<button id="redo" class="circle iconRedo"></button>';
+		html += '<button id="export" class="circle iconShare"></button>';
+		html += '<button id="optionsClose" class="circle iconClose"></button>';
+
+		html = '<span class="right">' + html + '</span>';
+		html = '<div class="tool">' + html + '</div>';
+
+		dialog.setContent('options', html);
+	},
+
+	showMainMenu: function() {
+		menu.initMainMenu();
 		dialog.show('menu');
+	},
+
+	showOptionsMenu: function() {
+		dialog.show('options');
 	},
 
 	selectFile: function(id) {
