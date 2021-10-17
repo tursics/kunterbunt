@@ -12,34 +12,21 @@ div {
 	position: relative;
 	transition: height 500ms ease, width 500ms ease;
 }
-.toolNone .canvas {
-	float: left;
-	height: calc(100% - 4rem - 4px);
-	width: calc(100% - .5rem - 5px);
+@media (orientation: landscape) {
+	.canvas {
+		float: right;
+		height: calc(100% - 2.25rem);
+		margin-right: 5rem;
+		width: calc(100% - 11rem + .5rem);
+	}
 }
-.toolTop .canvas {
-	height: calc(100% - 12.25rem);
-	position: sticky;
-	top: 5rem;
-	width: calc(100% - .5rem);
-}
-.toolLeft .canvas {
-	float: right;
-	height: calc(100% - 2.25rem);
-	margin-right: 5rem;
-	width: calc(100% - 11rem + .5rem);
-}
-.toolRight .canvas {
-	float: left;
-	height: calc(100% - 2.25rem);
-	margin-left: 5rem;
-	width: calc(100% - 11rem + .5rem);
-}
-.toolBottom .canvas {
-	float: left;
-	height: calc(100% - 12.25rem);
-	margin-top: 5rem;
-	width: calc(100% - .5rem);
+@media (orientation: portrait) {
+	.canvas {
+		height: calc(100% - 12.25rem);
+		position: sticky;
+		top: 5rem;
+		width: calc(100% - .5rem);
+	}
 }
 
 #imageAttribution {
@@ -68,61 +55,46 @@ div {
 	position: absolute;
 	z-index: 11;
 }
-.toolNone .tool {
-	display: none;
+@media (orientation: landscape) {
+	.tool {
+		bottom: 0;
+		left: 0;
+		top: 0;
+		width: 4rem;
+	}
+	.tool .left {
+		float: left;
+	}
+	.tool .middle {
+		left: .5rem;
+		position: fixed;
+		top: calc(50% - 4rem);
+		width: 4rem;
+	}
+	.tool .right {
+		bottom: .5rem;
+		left: .5rem;
+		position: fixed;
+		width: 4rem;
+	}
 }
-.toolTop .tool {
-	height: 4rem;
-	left: 0;
-	right: 0;
-	top: 0;
-}
-.toolLeft .tool {
-	bottom: 0;
-	left: 0;
-	top: 0;
-	width: 4rem;
-}
-.toolRight .tool {
-	bottom: 0;
-	right: 0;
-	top: 0;
-	width: 4rem;
-}
-.toolBottom .tool {
-	bottom: 0;
-	height: 4rem;
-	left: 0;
-	right: 0;
-}
-.toolTop .tool .left, .toolBottom .tool .left {
-	float: left;
-}
-.toolTop .tool .middle, .toolBottom .tool .middle {
-	left: calc(50% - 4rem);
-	position: fixed;
-}
-.toolTop .tool .right, .toolBottom .tool .right {
-	float: right;
-}
-.toolLeft .tool .left, .toolRight .tool .left {
-	float: left;
-}
-.toolLeft .tool .middle, .toolRight .tool .middle {
-	left: .5rem;
-	position: fixed;
-	top: calc(50% - 4rem);
-	width: 4rem;
-}
-.toolLeft .tool .right, .toolRight .tool .right {
-	bottom: .5rem;
-	left: .5rem;
-	position: fixed;
-	width: 4rem;
-}
-.toolRight .tool .middle, .toolRight .tool .right {
-	left: initial;
-	right: .5rem;
+@media (orientation: portrait) {
+	.tool {
+		height: 4rem;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+	.tool .left {
+		float: left;
+	}
+	.tool .middle {
+		left: calc(50% - 4rem);
+		position: fixed;
+	}
+	.tool .right {
+		float: right;
+	}
 }
 
 .subtools {
@@ -134,32 +106,21 @@ div {
 	transition: top 500ms ease, left 500ms ease, right 500ms ease, bottom 500ms ease, width 500ms ease;
 	z-index: 10;
 }
-.toolTop .subtools {
-	bottom: 0;
-	height: 4rem;
-	left: 0;
-	right: 0;
+@media (orientation: landscape) {
+	.subtools {
+		bottom: 0;
+		right: 0;
+		top: 0;
+		width: 4rem;
+	}
 }
-.toolLeft .subtools {
-	bottom: 0;
-	right: 0;
-	top: 0;
-	width: 4rem;
-}
-.toolRight .subtools {
-	bottom: 0;
-	left: 0;
-	top: 0;
-	width: 4rem;
-}
-.toolBottom .subtools {
-	height: 4rem;
-	left: 0;
-	right: 0;
-	top: 0;
-}
-.toolNone .subtools {
-	display: none;
+@media (orientation: portrait) {
+	.subtools {
+		bottom: 0;
+		height: 4rem;
+		left: 0;
+		right: 0;
+	}
 }
 
 button.circle {
@@ -197,9 +158,6 @@ button.circle.iconPalette {
 button.circle.iconPen {
 	background-image: url(assets/pen-fancy-solid.svg);
 }
-button.circle.iconPosition {
-	background-image: url(assets/sign-in-alt-solid.svg);
-}
 button.circle.iconRedo {
 	background-image: url(assets/redo-solid.svg);
 }
@@ -208,18 +166,6 @@ button.circle.iconShare {
 }
 button.circle.iconUndo {
 	background-image: url(assets/undo-solid.svg);
-}
-.toolTop button.circle.iconPosition {
-	transform: rotate(0deg);
-}
-.toolLeft button.circle.iconPosition {
-	transform: rotate(270deg);
-}
-.toolRight button.circle.iconPosition {
-	transform: rotate(90deg);
-}
-.toolBottom button.circle.iconPosition {
-	transform: rotate(180deg);
 }
 
 .subtools .swatch {

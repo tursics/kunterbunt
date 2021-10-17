@@ -28,7 +28,7 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - &check; Multi-Touch erlauben
 - &check; mehrere Bild-Vorlagen können ausgewählt werden
 - &check; Bilder in 2 Variante (bunt und weiß)
-- &check; Funktionsleisten können an allen 4 Rändern angeordnet werden
+- &check; Funktionsleisten passt sich automatisch Hoch- und Querformat an
 - &check; läuft im Browser
 - &check; optimiert für Computer
 - &check; Stift-Bedienung auf Touch-Bildschirmen

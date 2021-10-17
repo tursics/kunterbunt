@@ -33,10 +33,6 @@ var buttons = {
 			tool.buttons.colorSwatch[s].addEventListener('click', colors.setWithThis);
 		}
 		colors.init();
-
-		tool.buttons.positionNav = document.getElementById('positionNav');
-		tool.buttons.positionNav.addEventListener('click', buttons.moveNavigation);
-		buttons.moveNavigation();
 	},
 
 	update: function() {
@@ -46,30 +42,6 @@ var buttons = {
 
 	nothing: function() {
 		console.log('-');
-	},
-
-	moveNavigation: function() {
-		if (tool.navigation === 'left') {
-			document.body.classList.remove('toolLeft');
-			document.body.classList.add('toolTop');
-			tool.navigation = 'top';
-		} else if (tool.navigation === 'top') {
-			document.body.classList.remove('toolTop');
-			document.body.classList.add('toolRight');
-			tool.navigation = 'right';
-		} else if (tool.navigation === 'right') {
-			document.body.classList.remove('toolRight');
-			document.body.classList.add('toolBottom');
-			tool.navigation = 'bottom';
-		} else if (tool.navigation === 'bottom') {
-			document.body.classList.remove('toolBottom');
-			document.body.classList.add('toolLeft');
-			tool.navigation = 'left';
-		} else {
-			document.body.classList.remove('toolNone');
-			document.body.classList.add('toolLeft');
-			tool.navigation = 'left';
-		}
 	},
 
 };
