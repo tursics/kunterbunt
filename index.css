@@ -7,6 +7,12 @@ div {
 	display: inline-block;
 }
 
+.canvas, .tool, .subtools, .dialog {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 .canvas {
 	padding: .25rem .25rem 2rem .25rem;
 	position: relative;
@@ -123,6 +129,7 @@ div {
 		height: 4rem;
 		left: 0;
 		right: 0;
+		white-space: nowrap;
 	}
 }
 
@@ -138,6 +145,11 @@ button.circle {
 	height: 3rem;
 	margin: .5rem;
 	width: 3rem;
+	-webkit-tap-highlight-color: transparent;
+}
+button.circle:focus {
+	box-shadow: none;
+	outline: none !important;
 }
 button.circle:hover {
 	border-color: darksalmon;
