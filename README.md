@@ -35,10 +35,10 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - &check; mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
 - &check; Social Sharing (2000 Pixel breit oder hoch) für mobile Geräte (JPG-Datei)
 - &check; Social Sharing wird im Desktop-Browser zum Download-Button (PNG-Datei)
+- &check; die letzten 5 angefangenen Bilder speichern und wieder auswählbar machen
 
 **offen**
 
-- &cross; die letzten 5 angefangenen Bilder speichern und wieder auswählbar machen
 - &cross; optimiert für Tablets
 - &cross; optimiert für Telefone
 - &cross; optimiert für Drucker

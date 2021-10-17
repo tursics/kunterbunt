@@ -11,7 +11,7 @@ var paint = {
 
 	initImage: function() {
 		tool.canvas.dom = document.getElementById(tool.canvas.id);
-		tool.canvas.doc = tool.canvas.dom.contentDocument;
+		tool.canvas.doc = tool.canvas.dom.getSVGDocument();
 		tool.canvas.svg = tool.canvas.doc.querySelectorAll('svg')[0];
 
 		var pathes = tool.canvas.doc.querySelectorAll('path');
@@ -42,9 +42,9 @@ var paint = {
 			filecache.push(tool.canvas.attribtion.innerHTML, null, tool.canvas.title);
 		} else {
 			var storedImage = filecache.get(0);
-			console.log(storedImage);
-//			tool.canvas.doc.innerHTML = storedImage.svg;
-			tool.canvas.svg.outerHTML = storedImage.svg;
+			var sameOriginURL = URL.createObjectURL(new Blob([storedImage.svg], {type: 'image/svg+xml;charset=utf-8'}));
+
+			tool.canvas.dom.setAttribute('data', sameOriginURL);
 			tool.canvas.attribtion.innerHTML = storedImage.attribution;
 			tool.canvas.title = storedImage.title;
 		}

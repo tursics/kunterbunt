@@ -71,13 +71,8 @@ var menu = {
 		if (typeof id === 'string') {
 			var parts = id.split('-');
 			if ((parts.length === 2) && (parts[0] === 'cache')) {
-				var pos = parseInt(parts[1], 10);
+				filecache.moveToFront(parseInt(parts[1], 10));
 				tool.fileId = null;
-
-				// remove me
-				filecache.moveToFront(pos);
-				menu.showMainMenu();
-				return;
 			} else {
 				return;
 			}
