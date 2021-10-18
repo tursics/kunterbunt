@@ -266,23 +266,64 @@ button.circle.iconUndo {
 		top: 0;
 	}
 }
+.dialog .page.menu {
+	left: 5rem;
+	width: calc(100vw - 10rem - 4px);
+}
 @media only screen and (max-width: 45rem) {
+	.dialog .page.menu {
+		left: 3rem;
+		width: calc(100vw - 6rem - 4px);
+	}
 	.dialog .page.palette {
 		left: calc(50vw - 14.5rem);
 		width: 29rem;
 	}
 }
 @media only screen and (max-width: 31rem) {
+	.dialog .page.menu {
+		border-left: none;
+		border-radius: 0;
+		border-right: none;
+		left: 0;
+		width: 100vw;
+	}
 	.dialog .page.palette {
-		bottom: 4rem;
 		left: calc(50vw - 7.5rem);
-		top: 4rem;
 		width: 15rem;
 	}
 }
 @media only screen and (max-width: 15rem) {
+	.dialog .page.menu {
+	}
 	.dialog .page.palette {
 		left: 0;
+	}
+}
+.dialog .page.menu, .dialog .page.palette {
+	height: calc(100vh - 10rem - 4px);
+	height: fit-content;
+	max-height: calc(100vh - 10rem - 4px);
+	top: 5rem;
+}
+@media only screen and (max-height: 45rem) {
+	.dialog .page.menu, .dialog .page.palette {
+		height: calc(100vh - 6rem - 4px);
+		max-height: none;
+		top: 3rem;
+	}
+}
+@media only screen and (max-height: 31rem) {
+	.dialog .page.menu, .dialog .page.palette {
+		border-bottom: none;
+		border-radius: 0;
+		border-top: none;
+		height: 100vh;
+		top: 0;
+	}
+}
+@media only screen and (max-height: 15rem) {
+	.dialog .page.menu, .dialog .page.palette {
 	}
 }
 
