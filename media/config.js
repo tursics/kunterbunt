@@ -1,6 +1,11 @@
 var mediaConfig = [
 	{
 		group: 'root',
+		groupId: 'savedimages',
+		title: 'Letzte Kunstwerke',
+	},
+	{
+		group: 'root',
 		groupId: 'dionysos',
 		title: 'Dionysos-Mosaik, Köln',
 	},
@@ -12,7 +17,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/duck.svg',
 		sourceFile: 'rba_d022237.jpg',
-		title: '🦆 Stockente',
+		title: 'Stockente',
 	},
 	{
 		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
@@ -22,7 +27,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/duck-empty.svg',
 		sourceFile: 'rba_d022237.jpg',
-		title: '🦆 Stockente (in weiß)',
+		title: 'Stockente (in weiß)',
 	},
 	{
 		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
@@ -32,7 +37,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/duck-frame.svg',
 		sourceFile: 'rba_d022237.jpg',
-		title: '🦆 Stockente mit Rahmen',
+		title: 'Stockente mit Rahmen',
 	},
 	{
 		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
@@ -42,7 +47,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/duck-frame-empty.svg',
 		sourceFile: 'rba_d022237.jpg',
-		title: '🦆 Stockente mit Rahmen (in weiß)',
+		title: 'Stockente mit Rahmen (in weiß)',
 	},
 	{
 		attribution: '',
@@ -52,7 +57,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/flower.svg',
 		sourceFile: '',
-		title: '🌼 Blume',
+		title: 'Blume',
 	},
 	{
 		attribution: '',
@@ -62,7 +67,7 @@ var mediaConfig = [
 		material: 'Natursteine, Glas, Keramik',
 		path: 'media/flower-empty.svg',
 		sourceFile: '',
-		title: '🌼 Blume (in weiß)',
+		title: 'Blume (in weiß)',
 	},
 	{
 		group: 'root',
@@ -75,7 +80,7 @@ var mediaConfig = [
 		license: 'OER / CC BY SA 4.0',
 		path: 'media/raster-8x8-smiley.svg',
 		sourceFile: 'raster-8x8-smiley.png',
-		title: '😃 Smiley',
+		title: 'Smiley',
 	},
 	{
 		attribution: 'Deutsches Technikmuseum',
@@ -83,6 +88,16 @@ var mediaConfig = [
 		license: 'OER / CC BY SA 4.0',
 		path: 'media/raster-12x12-pinguin.svg',
 		sourceFile: 'raster-12x12-pinguin.png',
-		title: '🐧 Pinguin',
+		title: 'Pinguin',
+	},
+	{
+		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
+		dating: 'ca. 220-355',
+		group: 'dionysos',
+		license: 'CC BY-SA 3.0 DE',
+		material: 'Natursteine, Glas, Keramik',
+		path: 'media/foo.svg',
+		sourceFile: 'rba_d022240.jpg',
+		title: 'Mänade mit Kithara (Saiteninstrument) und Satyr mit Doppelflöte',
 	},
 ];

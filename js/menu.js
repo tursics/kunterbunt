@@ -7,36 +7,63 @@ var menu = {
 	},
 
 	initMainMenu: function() {
-		var html = '';
-		var cacheSize = filecache.size();
-
-		if (cacheSize > 0) {
-			var title = 'Letzte Kunstwerke';
-			html += '<li class="group">' + title + '</li>';
+		function getMenuCachedEntries() {
+			var html = '';
+			var cacheSize = filecache.size();
 
 			for (var c = 0; c < cacheSize; ++c) {
 				var file = filecache.get(c);
-
 				var f = "'cache-" + c + "'";
-				html += '<li onClick="menu.selectFile(' + f + ');">';
+
+				html += '<li class="art" onClick="menu.selectFile(' + f + ');">';
 				html += '<span class="inline-img">' + file.svg + '</span>';
 				html += '<span class="title">' + file.title + '</span>';
 				html += '</li>';
 			}
+
+			return html;
 		}
 
-		for (var f = 0; f < tool.files.length; ++f) {
-			var file = tool.files[f];
+		function getMenuChildEntries(group) {
+			var html = '';
 
-			if (file.groupId) {
-				html += '<li class="group">' + file.title + '</li>';
-			} else {
-				html += '<li onClick="menu.selectFile(' + f + ');">';
-				html += '<span class="img" style="background-image:url(' + file.path + ')"></span>';
-				html += '<span class="title">' + file.title + '</span>';
-				html += '</li>';
+			for (var f = 0; f < tool.files.length; ++f) {
+				var file = tool.files[f];
+
+				if (file.group === group) {
+					html += '<li class="art" onClick="menu.selectFile(' + f + ');">';
+					html += '<span class="img" style="background-image:url(' + file.path + ')"></span>';
+					html += '<span class="title">' + file.title + '</span>';
+					html += '</li>';
+				}
 			}
+
+			return html;
 		}
+
+		function getMenuListEntries() {
+			var html = '';
+
+			for (var f = 0; f < tool.files.length; ++f) {
+				var file = tool.files[f];
+
+				if (file.groupId) {
+					html += '<li class="main-group">';
+					html += '<div class="main-title">' + file.title + '</div>';
+
+					if (file.groupId === 'savedimages') {
+						html += '<ul>' + getMenuCachedEntries() + '</ul>';
+					} else {
+						html += '<ul>' + getMenuChildEntries(file.groupId) + '</ul>';
+					}
+					html += '</li>';
+				}
+			}
+
+			return html;
+		}
+
+		var html = getMenuListEntries();
 
 		html = '<ul>' + html + '</ul>';
 		html = '<h4>Wähle ein Bild zum ausmalen aus</h4>' + html;

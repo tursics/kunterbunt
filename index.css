@@ -238,6 +238,10 @@ button.circle.iconUndo {
 	border: none;
 	border-radius: 0;
 }
+.dialog .page.menu {
+	background: #666;
+	border-color: #bbb;
+}
 .dialog .page.palette {
 	left: calc(50vw - 21.5rem);
 	overflow-x: hidden;
@@ -298,6 +302,30 @@ button.circle.iconUndo {
 .dialog .page.menu li {
 	width: 16rem;
 }
+.dialog .page.menu li.main-group {
+	background: #666;
+	color: #fff;
+	cursor: default;
+	display: block;
+	margin: 0 .5rem;
+	padding: .5rem;
+	width: auto;
+}
+.dialog .page.menu li.main-group .main-title {
+	border-bottom: 2px solid darksalmon;
+	line-height: 1.5rem;
+	margin-bottom: .5rem;
+}
+.dialog .page.menu li.main-group ul {
+	border-left: 2px solid darksalmon;
+	border-right: 2px solid darksalmon;
+	overflow-x: scroll;
+	padding: 0;
+	white-space: nowrap;
+}
+.dialog .page.menu li.main-group li.art {
+	width: 6rem;
+}
 .dialog .page.palette .emoji {
 	background: #ffffffc0;
     border-radius: 2rem;
@@ -313,18 +341,17 @@ button.circle.iconUndo {
 	float: left;
 }
 .dialog .page.palette .title, .dialog .page.menu .title {
-	background: #ffffffc0;
-	border-radius: .3rem;
 	float: left;
 	line-height: 1.5rem;
-	margin: -2.5rem 0 0 3.25rem;
-	padding: 0 .5rem 0 .5rem;
 	white-space: nowrap;
 }
 .dialog .page.menu .title {
-	margin-left: .5rem;
-	max-width: 14rem;
+	line-height: 1rem;
+	height: 2rem;
 	overflow: hidden;
+	text-align: center;
+	white-space: normal;
+	width: 6rem;
 }
 .dialog .page.palette svg {
 	border-radius: .5rem;
@@ -332,11 +359,11 @@ button.circle.iconUndo {
 	width: 13rem;
 }
 .dialog .page.menu .img, .dialog .page.menu .inline-img {
-	background-color: #bcc;
+	background-color: #ccc;
 	border-radius: .5rem;
 	float: left;
-	height: 5rem;
-	width: 16rem;
+	height: 6rem;
+	width: 6rem;
 }
 .dialog .page.menu .img {
 	background-position: center;
@@ -344,6 +371,7 @@ button.circle.iconUndo {
 	background-size: contain;
 }
 .dialog .page.menu .inline-img svg {
+	border-radius: .5rem;
 	height: 100%;
 	width: 100%;
 }
@@ -355,5 +383,6 @@ button.circle.iconUndo {
 	width: 15rem;
 }
 .dialog .page.menu h4 {
+	color: #fff;
 	margin: 2rem 1.5rem 1rem 1.5rem;
 }
