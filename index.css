@@ -327,7 +327,11 @@ button.circle.iconUndo {
 	}
 }
 
-.dialog .page.palette ul, .dialog .page.menu ul {
+.dialog .page.menu ul {
+	list-style-type: none;
+	padding: 0;
+}
+.dialog .page.palette ul {
 	list-style-type: none;
 	padding: 0 .5rem;
 }
@@ -348,8 +352,8 @@ button.circle.iconUndo {
 	color: #fff;
 	cursor: default;
 	display: block;
-	margin: 0 .5rem;
-	padding: .5rem;
+	margin: 0;
+	padding: .5rem 1rem;
 	width: auto;
 }
 .dialog .page.menu li.main-group .main-title {
@@ -358,10 +362,9 @@ button.circle.iconUndo {
 	margin-bottom: .5rem;
 }
 .dialog .page.menu li.main-group ul {
-	border-left: 2px solid darksalmon;
-	border-right: 2px solid darksalmon;
+	margin: 0 -1rem;
 	overflow-x: scroll;
-	padding: 0;
+	padding: 0 .5rem;
 	white-space: nowrap;
 }
 .dialog .page.menu li.main-group li.art {
@@ -425,5 +428,5 @@ button.circle.iconUndo {
 }
 .dialog .page.menu h4 {
 	color: #fff;
-	margin: 2rem 1.5rem 1rem 1.5rem;
+	margin: 2rem 1rem 1rem 1rem;
 }
