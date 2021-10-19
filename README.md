@@ -31,6 +31,9 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 - &check; Funktionsleisten passt sich automatisch Hoch- und Querformat an
 - &check; läuft im Browser
 - &check; optimiert für Computer
+- &check; optimiert für Tablets
+- &check; optimiert für Telefone
+- &check; optimiert für Drucker (wer das Bild drucken möchte, der bekommt eine wunderschöne Ansicht :-) )
 - &check; Stift-Bedienung auf Touch-Bildschirmen
 - &check; mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
 - &check; Social Sharing (2000 Pixel breit oder hoch) für mobile Geräte (JPG-Datei)
@@ -39,14 +42,11 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 
 **offen**
 
-- &cross; optimiert für Tablets
-- &cross; optimiert für Telefone
-- &cross; optimiert für Drucker
-- &cross; eventuell für Deckenbeamer optimieren
-- &cross; Helligkeit von Farben ändern können
-- &cross; Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
 - &cross; mehr Farbpaletten hinzufügen
 - &cross; mehr Bildvorlagen hinzufügen
+- &cross; Bugs sind alle gefixt (besonders die auf Safari und iOS)
+- &cross; Helligkeit von Farben ändern können
+- &cross; Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
 - &cross; Bilder als Video abspeichern / teilen
 - &cross; SVGs von der Festplatte / URL importieren
 - &cross; Hauptfunktion als Library in npm auslagern

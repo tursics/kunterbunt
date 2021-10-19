@@ -430,3 +430,33 @@ button.circle.iconUndo {
 	color: #fff;
 	margin: 2rem 1rem 1rem 1rem;
 }
+
+/* ------------------------- */
+/*           print           */
+/* ------------------------- */
+
+@media print {
+	@page {
+		margin: 0;
+	}
+	body {
+		margin: 1cm;
+	}
+	.print-none {
+		display: none;
+	}
+	.canvas {
+		height: calc(100vh - 3.25rem - 2cm);
+		top: 0;
+	}
+	#imageAttribution {
+		background: none;
+		bottom: -1rem;
+		color: #000;
+		line-height: 1.25rem;
+	}
+	#imageAttribution::after {
+		content: 'Dieses Bild wurde gedruckt mit #NameDerApp';
+		display: block;
+	}
+}
