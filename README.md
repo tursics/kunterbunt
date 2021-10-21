@@ -1,8 +1,8 @@
-# Dionysos-Mosaik
+# Kunterbunt
 
 Römisch-Germanisches Museum der Stadt Köln
 
-Das Mosaik in einer luxuriösen Stadtvilla des römischen Köln
+Das Dionysos-Mosaik in einer luxuriösen Stadtvilla des römischen Köln
 
 Coding da Vinci Nieder.Rhein.Land 2021
 

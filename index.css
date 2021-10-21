@@ -456,7 +456,7 @@ button.circle.iconUndo {
 		line-height: 1.25rem;
 	}
 	#imageAttribution::after {
-		content: 'Dieses Bild wurde gedruckt mit #NameDerApp';
+		content: 'Dieses Bild wurde gedruckt mit "Kunterbunt"';
 		display: block;
 	}
 }
