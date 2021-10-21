@@ -13,12 +13,14 @@ var menu = {
 
 			for (var c = 0; c < cacheSize; ++c) {
 				var file = filecache.get(c);
-				var f = "'cache-" + c + "'";
+				if (file) {
+					var f = "'cache-" + c + "'";
 
-				html += '<li class="art" onClick="menu.selectFile(' + f + ');">';
-				html += '<span class="inline-img">' + file.svg + '</span>';
-				html += '<span class="title">' + file.title + '</span>';
-				html += '</li>';
+					html += '<li class="art" onClick="menu.selectFile(' + f + ');">';
+					html += '<span class="inline-img">' + file.svg + '</span>';
+					html += '<span class="title">' + file.title + '</span>';
+					html += '</li>';
+				}
 			}
 
 			return html;
