@@ -21,6 +21,7 @@ Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/tre
 
 **erledigt**
 
+- &check; Besseren Namen für das Projekt finden
 - &check; SVG-Ausmal-Editor
 - &check; Farbe auswählen und losmalen
 - &check; Stift malt eine Fläche mit einer Farbe aus
