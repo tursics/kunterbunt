@@ -17,6 +17,8 @@ Die *Icons* stehen unter freien **CC BY 4.0**-Lizenz. Danke [Font Awesome](https
 
 Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/trending) sind frei verwendbar [Our colors and their combination are not protected by any kind of copyright or intellectual property. You can, therefore, use them freely without any permission or any reference to Coolors](https://help.coolors.co/hc/en-us/articles/360010649799-Do-I-need-special-permissions-to-use-your-colors-).
 
+Font *Cookie* https://fonts.google.com/specimen/Cookie  These fonts are licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
+
 ## Features
 
 **erledigt**
