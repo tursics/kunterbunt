@@ -37,6 +37,7 @@ Font *Cookie* https://fonts.google.com/specimen/Cookie  These fonts are licensed
 - &check; optimiert für Tablets
 - &check; optimiert für Telefone
 - &check; optimiert für Drucker (wer das Bild drucken möchte, der bekommt eine wunderschöne Ansicht :-) )
+- &check; zeige einen QR-Code um auf die Lizenz zu verlinken - beim drucken
 - &check; Stift-Bedienung auf Touch-Bildschirmen
 - &check; mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
 - &check; Social Sharing (2000 Pixel breit oder hoch) für mobile Geräte (JPG-Datei)

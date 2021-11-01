@@ -453,7 +453,21 @@ button.circle.iconUndo {
 		background: none;
 		bottom: -1rem;
 		color: #000;
+		font-size: .8rem;
 		line-height: 1.25rem;
+	}
+	#imageAttribution::before {
+		background: url('assets/qr-code-by-sa-3.0-de.svg');
+		background-size: 20mm;
+		bottom: 5mm;
+		content: '';
+		display: block;
+		position: fixed;
+		left: 5mm;
+		height: 20mm;
+		width: 20mm;
+		-webkit-print-color-adjust: exact !important;
+		color-adjust: exact !important;
 	}
 	#imageAttribution::after {
 		content: 'Dieses Bild wurde gedruckt mit "Kunterbunt"';

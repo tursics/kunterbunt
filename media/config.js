@@ -10,7 +10,7 @@ var mediaConfig = [
 		title: 'Dionysos-Mosaik, Köln',
 	},
 	{
-		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
+		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner, bearbeitet',
 		dating: 'ca. 220-355',
 		group: 'dionysos',
 		license: 'CC BY-SA 3.0 DE',
@@ -20,7 +20,7 @@ var mediaConfig = [
 		title: 'Stockente',
 	},
 	{
-		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
+		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner, bearbeitet',
 		dating: 'ca. 220-355',
 		group: 'dionysos',
 		license: 'CC BY-SA 3.0 DE',
@@ -30,7 +30,7 @@ var mediaConfig = [
 		title: 'Stockente (in weiß)',
 	},
 	{
-		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
+		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner, bearbeitet',
 		dating: 'ca. 220-355',
 		group: 'dionysos',
 		license: 'CC BY-SA 3.0 DE',
@@ -40,7 +40,7 @@ var mediaConfig = [
 		title: 'Stockente mit Rahmen',
 	},
 	{
-		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
+		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner, bearbeitet',
 		dating: 'ca. 220-355',
 		group: 'dionysos',
 		license: 'CC BY-SA 3.0 DE',
@@ -50,7 +50,7 @@ var mediaConfig = [
 		title: 'Stockente mit Rahmen (in weiß)',
 	},
 	{
-		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Michael Albers',
+		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Michael Albers, bearbeitet',
 		dating: 'ca. 220-355',
 		group: 'dionysos',
 		license: 'CC BY-SA 3.0 DE',
@@ -60,7 +60,7 @@ var mediaConfig = [
 		title: 'Blume',
 	},
 	{
-		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Michael Albers',
+		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Michael Albers, bearbeitet',
 		dating: 'ca. 220-355',
 		group: 'dionysos',
 		license: 'CC BY-SA 3.0 DE',
@@ -70,7 +70,7 @@ var mediaConfig = [
 		title: 'Blume (in weiß)',
 	},
 	{
-		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner',
+		attribution: 'Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / Anja Wegner, bearbeitet',
 		dating: 'ca. 220-355',
 		group: 'dionysos',
 		license: 'CC BY-SA 3.0 DE',
@@ -85,7 +85,7 @@ var mediaConfig = [
 		title: 'kids.digilab.berlin',
 	},
 	{
-		attribution: 'Deutsches Technikmuseum',
+		attribution: 'Deutsches Technikmuseum, bearbeitet',
 		group: 'kidsdigilab',
 		license: 'OER / CC BY SA 4.0',
 		path: 'media/raster-8x8-smiley.svg',
@@ -93,7 +93,7 @@ var mediaConfig = [
 		title: 'Smiley',
 	},
 	{
-		attribution: 'Deutsches Technikmuseum',
+		attribution: 'Deutsches Technikmuseum, bearbeitet',
 		group: 'kidsdigilab',
 		license: 'OER / CC BY SA 4.0',
 		path: 'media/raster-12x12-pinguin.svg',
