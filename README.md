@@ -102,5 +102,17 @@ Für jedes Kästchen also:
 Zum Abschluß
 
 - Bild als SVG-Datei im Ordner `media` speichern
+- Bild mit der App "ImageOptim" kleiner rechnen (spart ca. 70%)
 - `config.js` im `media`-Ordner öffnen
 - Bild mit Metadaten referenzieren
+
+## Trivia
+
+Für ein Kästchen/Mosaikstein benötige ich (wenn alles gut läuft) **ca. 8 Sekunden** zum zeichnen.
+
+Bild-Motiv  |Mosaiksteine  |brutto Arbeitszeit
+------------|--------------|------------------
+Blume       |          478 | 1 bis 2 Stunden
+Ente        |          705 | 1,5 bis 3 Stunden
+"Große" Ente|         3507 | 8 bis 16 Stunden
+Mänade      | (derzeit) 7198 | 16 bis 32 Stunden
