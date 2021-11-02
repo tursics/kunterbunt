@@ -1,10 +1,35 @@
 # Kunterbunt
 
-Römisch-Germanisches Museum der Stadt Köln
+Gestalte die Dionysos-Mosaike mit frischen Farben neu und ergänze fehlerhafte Stellen nach deinen Vorstellungen.
 
-Das Dionysos-Mosaik in einer luxuriösen Stadtvilla des römischen Köln
+![Kunterbunt-Logo](https://github.com/tursics/kunterbunt/blob/main/media/banner.png?raw=true)
 
-Coding da Vinci Nieder.Rhein.Land 2021
+Das **Dionysos-Mosaik in Köln** besteht aus über 1,5 Millionen Steinen.
+Leider enthält es einige Fehlstellen und keiner weiß, wie die Motive in der **ehemaligen römischen Stadtvilla** einmal vollständig ausgesehen haben.
+Jetzt kannst **du** die leeren Stellen im Mosaik kreativ füllen.
+Wähle eine Farbe und färbe die fehlenden Steine zu einem neuen Gesamtkunstwerk zusammen.
+
+Mit **Kunterbunt** ist eine Web-Applikation entstanden, die nicht nur die fehlenden Steine im Mosaik ergänzen kann.
+Du kannst jeden beliebigen Stein im Mosaik umfärben.
+Für deine Kreativität stehen mehrere Teil-Motive des großen Mosaiks und eine große Auswahl an wohlabgestimmten Farbpaletten zur Verfügung.
+Wähle selbst, ob du kolorierte oder komplett weiße Steine als Vorlage haben möchtest.
+
+Egal ob am **PC, Tablet oder Smartphone** - malen kannst du überall.
+Da jeder Stein per Hand für die Malvorlage nachgemalt wurde, entstehen hochaufgelöste Bilder, die du mit deinen Freund:innen **teilen und ausdrucken** kannst.
+
+Motive mit wenigen Steinen sind besser für Einsteiger geeignet; und für Kinder.
+Das Deutsche Technikmuseum bietet für Kinder spezielle **Ausmalbilder mit Pixeln** an.
+Diese sind in der App bereits integriert.
+
+*Der Kern der Anwendung hat sich zu einer JavaScript-Bibliothek zum editieren/färben von beliebigen SVG-Grafiken entwickelt, mobile first und touch-freundlich.
+Es macht Sinn diesen Teil in Zukunft auszulagern und zum Beispiel als npm-Paket anderen Projekten und Webseiten zur Verfügung zu stellen.*
+
+## Warum das ganze?
+
+Dieses Projekt ist mein Beitrag zum Hackathon "Coding da Vinci Nieder.Rhein.Land 2021".
+Die Arbeitszeit des Projektes fand zwischen dem 11.09.2021 und 06.11.2021 statt.
+
+Projektwebseite: https://codingdavinci.de/de/projekte/kunterbunt
 
 ## Lizenzen
 
@@ -17,7 +42,7 @@ Die *Icons* stehen unter freien **CC BY 4.0**-Lizenz. Danke [Font Awesome](https
 
 Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/trending) sind frei verwendbar [Our colors and their combination are not protected by any kind of copyright or intellectual property. You can, therefore, use them freely without any permission or any reference to Coolors](https://help.coolors.co/hc/en-us/articles/360010649799-Do-I-need-special-permissions-to-use-your-colors-).
 
-Font *Cookie* https://fonts.google.com/specimen/Cookie  These fonts are licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
+Der Font *[Cookie](https://fonts.google.com/specimen/Cookie)* steht unter der freien [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
 
 ## Features
 
@@ -79,8 +104,3 @@ Zum Abschluß
 - Bild als SVG-Datei im Ordner `media` speichern
 - `config.js` im `media`-Ordner öffnen
 - Bild mit Metadaten referenzieren
-
-## Software-Ideen
-
-- [Paint by number generator](https://drake7707.github.io/paintbynumbersgenerator/index.html)
-- [Color by number pixel art](https://codepen.io/mathhulk/pen/VwaXOXR)
