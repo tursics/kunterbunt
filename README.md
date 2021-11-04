@@ -115,4 +115,4 @@ Bild-Motiv  |Mosaiksteine  |brutto Arbeitszeit
 Blume       |          478 | 1 bis 2 Stunden
 Ente        |          705 | 1,5 bis 3 Stunden
 "Große" Ente|         3507 | 8 bis 16 Stunden
-Mänade      |8064 (bunt) + 3226 (weiß) | 20 bis 38 Stunden
+Mänade      |11397 (8171 bunt + 3226 weiß) | 20 bis 38 Stunden
