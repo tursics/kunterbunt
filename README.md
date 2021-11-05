@@ -2,6 +2,10 @@
 
 Gestalte die Dionysos-Mosaike mit frischen Farben neu und ergänze fehlerhafte Stellen nach deinen Vorstellungen.
 
+* hol dir die [Web-App](https://tursics.de/app/kunterbunt/)
+* ein Projekt mit Kulturdaten von [Coding da Vinci: Nieder.Rhein.Land 2021](https://codingdavinci.de/de/projekte/kunterbunt)
+* schau dir den [Quelltext](https://github.com/tursics/kunterbunt) an
+
 ![Kunterbunt-Logo](https://github.com/tursics/kunterbunt/blob/main/media/banner.png?raw=true)
 
 Das **Dionysos-Mosaik in Köln** besteht aus über 1,5 Millionen Steinen.
@@ -31,19 +35,6 @@ Die Arbeitszeit des Projektes fand zwischen dem 11.09.2021 und 06.11.2021 statt.
 
 Projektwebseite: https://codingdavinci.de/de/projekte/kunterbunt
 
-## Lizenzen
-
-Der *Source-Code* steht unter der freien **MIT**-Lizenz.
-
-Die *Bilder* stehen unter der freien **CC BY-SA 3.0 DE**-Lizenz mit dem Zusatz "Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / [Fotograf*in]".
-Mehr Infos auf [Coding da Vinci](https://codingdavinci.de/daten/das-mosaik-einer-luxurioesen-stadtvilla-des-roemischen-koeln).
-
-Die *Icons* stehen unter freien **CC BY 4.0**-Lizenz. Danke [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free).
-
-Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/trending) sind frei verwendbar [Our colors and their combination are not protected by any kind of copyright or intellectual property. You can, therefore, use them freely without any permission or any reference to Coolors](https://help.coolors.co/hc/en-us/articles/360010649799-Do-I-need-special-permissions-to-use-your-colors-).
-
-Der Font *[Cookie](https://fonts.google.com/specimen/Cookie)* steht unter der freien [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
-
 ## Features
 
 **erledigt**
@@ -71,15 +62,15 @@ Der Font *[Cookie](https://fonts.google.com/specimen/Cookie)* steht unter der fr
 
 **offen**
 
-- &cross; mehr Farbpaletten hinzufügen
-- &cross; mehr Bildvorlagen hinzufügen
-- &cross; Bugs sind alle gefixt (besonders die auf Safari und iOS)
-- &cross; Helligkeit von Farben ändern können
-- &cross; Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
-- &cross; Bilder als Video abspeichern / teilen
-- &cross; SVGs von der Festplatte / URL importieren
-- &cross; Hauptfunktion als Library in npm auslagern
-- &cross; benutze Facebook um Bilder auf mehreren Geräten zu synchronisieren
+- mehr Farbpaletten hinzufügen
+- mehr Bildvorlagen hinzufügen
+- Bugs sind alle gefixt (besonders die auf Safari und iOS)
+- Helligkeit von Farben ändern können
+- Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
+- Bilder als Video abspeichern / teilen
+- SVGs von der Festplatte / URL importieren
+- Hauptfunktion als Library in npm auslagern
+- benutze Facebook um Bilder auf mehreren Geräten zu synchronisieren
 
 ## Bilder vorbereiten
 
@@ -116,3 +107,16 @@ Blume       |          478 | 1 bis 2 Stunden
 Ente        |          705 | 1,5 bis 3 Stunden
 "Große" Ente|         3507 | 8 bis 16 Stunden
 Mänade      |11397 (8171 bunt + 3226 weiß) | 20 bis 38 Stunden
+
+## Lizenzen
+
+Der *Source-Code* steht unter der freien **MIT**-Lizenz.
+
+Die *Bilder* stehen unter der freien **CC BY-SA 3.0 DE**-Lizenz mit dem Zusatz "Rheinisches Bildarchiv Köln / Römisch Germanisches Museum Köln / [Fotograf*in]".
+Mehr Infos auf [Coding da Vinci](https://codingdavinci.de/daten/das-mosaik-einer-luxurioesen-stadtvilla-des-roemischen-koeln).
+
+Die *Icons* stehen unter freien **CC BY 4.0**-Lizenz. Danke [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free).
+
+Die *Farbpaletten* von [Trending color palettes](https://coolors.co/palettes/trending) sind frei verwendbar [Our colors and their combination are not protected by any kind of copyright or intellectual property. You can, therefore, use them freely without any permission or any reference to Coolors](https://help.coolors.co/hc/en-us/articles/360010649799-Do-I-need-special-permissions-to-use-your-colors-).
+
+Der Font *[Cookie](https://fonts.google.com/specimen/Cookie)* steht unter der freien [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
