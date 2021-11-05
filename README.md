@@ -58,6 +58,8 @@ Projektwebseite: https://codingdavinci.de/de/projekte/kunterbunt
 - &check; mehrere Farbpaletten können in `media/colorswatch.js` hinterlegt werden (mit bis zu 10 Farben)
 - &check; Social Sharing (2000 Pixel breit oder hoch) für mobile Geräte (JPG-Datei)
 - &check; Social Sharing wird im Desktop-Browser zum Download-Button (PNG-Datei)
+- &check; Bild und Metadaten erstellt, wenn man die Webseite über Social Media teilt
+- &check; App Icon erstellt (für alle möglichen Größen)
 - &check; die letzten 5 angefangenen Bilder speichern und wieder auswählbar machen
 
 **offen**
@@ -67,7 +69,7 @@ Projektwebseite: https://codingdavinci.de/de/projekte/kunterbunt
 - Bugs sind alle gefixt (besonders die auf Safari und iOS)
 - Helligkeit von Farben ändern können
 - Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
-- Bilder als Video abspeichern / teilen
+- Bilder als Video abspeichern / teilen (die Undo-Funktion hält entsprechende Daten)
 - SVGs von der Festplatte / URL importieren
 - Hauptfunktion als Library in npm auslagern
 - benutze Facebook um Bilder auf mehreren Geräten zu synchronisieren
