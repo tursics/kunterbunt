@@ -103,12 +103,14 @@ Zum Abschluß
 
 Für ein Kästchen/Mosaikstein benötige ich (wenn alles gut läuft) **ca. 8 Sekunden** zum zeichnen.
 
-Bild-Motiv  |Mosaiksteine  |brutto Arbeitszeit
-------------|--------------|------------------
-Blume       |          478 | 1 bis 2 Stunden
-Ente        |          705 | 1,5 bis 3 Stunden
-"Große" Ente|         3507 | 8 bis 16 Stunden
-Mänade      |11397 (8171 bunt + 3226 weiß) | 20 bis 38 Stunden
+Bild-Motiv         |Mosaiksteine  |brutto Arbeitszeit
+-------------------|--------------|------------------
+Blume              |          478 | 1 bis 2 Stunden
+Ente komplett      |         3507 | 8 bis 16 Stunden
+Ente ausgeschnitten|          705 |
+Mänade und Satyr   |11397 (8171 bunt + 3226 weiß) | 20 bis 38 Stunden
+Mänade             |         1944 |
+Satyr              |         1760 |
 
 ## Lizenzen
 
