@@ -14,11 +14,18 @@ function fixViewPortHeight() {
 	fix();
 }
 
+function preventIOS10AccessibilityFeature() {
+	document.addEventListener('gesturestart', function (e) {
+		e.preventDefault();
+	});
+}
+
 window.addEventListener('load', function() {
 	tool.colorPalette = mediaColorSwatch;
 	tool.files = mediaConfig;
 
 	preventScrolling();
+	preventIOS10AccessibilityFeature();
 	fixViewPortHeight();
 
 	paint.init();
