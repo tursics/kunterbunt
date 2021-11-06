@@ -45,8 +45,9 @@ Projektwebseite: https://codingdavinci.de/de/projekte/kunterbunt
 - &check; Stift malt eine Fläche mit einer Farbe aus
 - &check; Undo und Redo
 - &check; Multi-Touch erlauben
-- &check; mehrere Bild-Vorlagen können ausgewählt werden
 - &check; Bilder in 2 Variante (bunt und weiß)
+- &check; 14 Bild-Vorlagen können ausgewählt werden
+- &check; 29 wunderschöne Farbpaletten stehen zur Auswahl
 - &check; Funktionsleisten passt sich automatisch Hoch- und Querformat an
 - &check; läuft im Browser
 - &check; optimiert für Computer
@@ -64,8 +65,6 @@ Projektwebseite: https://codingdavinci.de/de/projekte/kunterbunt
 
 **offen**
 
-- mehr Farbpaletten hinzufügen
-- mehr Bildvorlagen hinzufügen
 - Bugs sind alle gefixt (besonders die auf Safari und iOS)
 - Helligkeit von Farben ändern können
 - Pinsel soll eine Fläche mit einer Farbe wählen, wobei die Helligkeit automatisch variiert
