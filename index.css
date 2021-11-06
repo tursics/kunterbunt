@@ -1,6 +1,11 @@
+html {
+	height: -webkit-fill-available;
+}
+
 body {
 	height: 100vh;
 	height: var(--vh);
+	height: -webkit-fill-available;
 	margin: 0;
 	overflow: hidden;
 }
