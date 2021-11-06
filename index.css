@@ -446,8 +446,13 @@ button.circle.iconUndo {
 	@page {
 		margin: 0;
 	}
+	html {
+		height: 100%;
+	}
 	body {
 		margin: 1cm;
+		height: calc(100% - 2cm);
+		width: calc(100% - 2cm);
 	}
 	.print-none {
 		display: none;
