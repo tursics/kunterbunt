@@ -21,6 +21,7 @@ div {
 	.canvas {
 		float: right;
 		height: calc(100vh - 2.25rem);
+		height: calc(var(--vh) - 2.25rem);
 		margin-right: 5rem;
 		width: calc(100vw - 11rem + .5rem);
 	}
@@ -28,6 +29,7 @@ div {
 @media (orientation: portrait) {
 	.canvas {
 		height: calc(100vh - 12.25rem);
+		height: calc(var(--vh) - 12.25rem);
 		position: absolute;
 		top: 5rem;
 		width: calc(100vw - .5rem);
@@ -301,13 +303,16 @@ button.circle.iconUndo {
 }
 .dialog .page.menu, .dialog .page.palette {
 	height: calc(100vh - 10rem - 4px);
+	height: calc(var(--vh) - 10rem - 4px);
 	height: fit-content;
 	max-height: calc(100vh - 10rem - 4px);
+	max-height: calc(var(--vh) - 10rem - 4px);
 	top: 5rem;
 }
 @media only screen and (max-height: 45rem) {
 	.dialog .page.menu, .dialog .page.palette {
 		height: calc(100vh - 6rem - 4px);
+		height: calc(var(--vh) - 6rem - 4px);
 		max-height: none;
 		top: 3rem;
 	}
@@ -318,6 +323,7 @@ button.circle.iconUndo {
 		border-radius: 0;
 		border-top: none;
 		height: 100vh;
+		height: var(--vh);
 		top: 0;
 	}
 }
