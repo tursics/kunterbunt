@@ -16,22 +16,21 @@ div {
 .canvas {
 	padding: .25rem .25rem 2rem .25rem;
 	position: relative;
-	transition: height 500ms ease, width 500ms ease;
 }
 @media (orientation: landscape) {
 	.canvas {
 		float: right;
-		height: calc(100% - 2.25rem);
+		height: calc(100vh - 2.25rem);
 		margin-right: 5rem;
-		width: calc(100% - 11rem + .5rem);
+		width: calc(100vw - 11rem + .5rem);
 	}
 }
 @media (orientation: portrait) {
 	.canvas {
-		height: calc(100% - 12.25rem);
-		position: sticky;
+		height: calc(100vh - 12.25rem);
+		position: absolute;
 		top: 5rem;
-		width: calc(100% - .5rem);
+		width: calc(100vw - .5rem);
 	}
 }
 
